@@ -4,7 +4,7 @@ import Link from "next/link";
 const Login = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row justify-between lg:h-[calc(100vh-96px)]">
-      <div className="lg:w-[45%] -mt-20 lg:mt-0 flex flex-col justify-center gap-16 pb-24 pt-4 px-6 relative">
+      <div className="lg:w-[45%] -mt-20 lg:mt-0 flex flex-col justify-center gap-16 pb-24 pt-4 px-6 lg:px-32 relative">
         <div className="text-center">
           <Image
             src="/img/submelk/logoCircle.png"
@@ -54,7 +54,7 @@ const Login = () => {
       </div>
 
       <div
-        className="lg:w-[55%] h-[175px] lg:h-auto rounded-[10px] lg:rounded-none mx-3 bg-no-repeat lg:bg-[url(/img/submelk/loginBg1.png)] bg-[url(/img/submelk/loginBgMobile.png)]"
+        className="lg:w-[55%] h-[175px] lg:h-auto rounded-[10px] lg:rounded-none mx-3 lg:mx-0 bg-no-repeat lg:bg-[url(/img/submelk/loginBg1.png)] bg-[url(/img/submelk/loginBgMobile.png)]"
         style={{
           //   backgroundImage: "url(/img/submelk/loginBg1.png)",
           backgroundSize: "100% 100%",
