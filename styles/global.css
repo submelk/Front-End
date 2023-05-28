@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: IranSans;
+  src: url("/fonts/IRANSans.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: IranSans;
+  src: url("/fonts/IRANSans_bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: IranSans;
+  src: url("/fonts/IRANSans_Light.ttf");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "IRANYekanXVF";
+  src: url("/fonts/IRANYekanXVF.woff") format("woff-variations"),
+    /* will be the standard and works in Safari now */
+      url("/fonts/IRANYekanXVF.woff") format("woff");
+  /* for the other supporting browsers */
+  font-weight: 100 1000;
+  font-display: fallback;
+}
+
+body {
+  /* font-family: "IranSans", sans-serif; */
+  direction: rtl;
+  text-align: right;
+  font-size: 16px;
+  /* background-color: #f5f7f9; */
+  background-color: #fff;
+  color: #5d6f7e;
+}
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "IRANYekanXVF", tahoma;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* slider */
+.slick-arrow {
+  background: white !important;
+  top: -42px !important;
+  left: 0 !important;
+  right: unset !important;
+  z-index: 9;
+
+  background-image: url("/img/arrow.svg") !important;
+  background-size: 6px 12px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  content: "" !important;
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 100%;
+
+  padding: 10px !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+  background-image: url("/img/arrowRev.svg") !important;
+}
+.slick-next {
+  left: 50px !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  content: "" !important;
+}
+
+input:focus-within {
+  outline: 0 !important;
+}
+
+/* react selecet */
+.reactSelect {
+  width: 100%;
+}
+.reactSelect____indicator-separator {
+  display: none;
+}
+
+.reactSelect____placeholder {
+  color: #1c1c1e !important;
+}
+
+.reactSelect____control {
+  border-color: #1c1c1e !important;
+  background-color: transparent !important;
+}
+.reactSelect____dropdown-indicator svg {
+  fill: black;
+}
+
+.inputProj {
+  background: rgba(216, 216, 216, 0.1);
+  border: 1px solid #62666d;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.selectStemp__control {
+  border: none !important;
+  border-bottom: solid 1px #cecece !important ;
+  box-shadow: none !important;
+}
+.selectStemp__indicator-separator {
+  display: none !important;
+}

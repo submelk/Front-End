@@ -1,0 +1,20 @@
+.card img {
+  max-height: 200px;
+}
+
+.imgPlaceHolder {
+  background-color: gray;
+  height: 200px;
+}
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+
+  width: 280px;
+  height: 340px;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+}
