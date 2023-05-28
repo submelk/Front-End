@@ -20,9 +20,9 @@
 
 @font-face {
   font-family: "IRANYekanXVF";
-  src: url("/fonts/IRANYekanXVF.woff") format("woff-variations"),
+  src: url("/fonts/IRANYekanXVFaNumVF.woff") format("woff-variations"),
     /* will be the standard and works in Safari now */
-      url("/fonts/IRANYekanXVF.woff") format("woff");
+      url("/fonts/IRANYekanXVFaNumVF.woff") format("woff");
   /* for the other supporting browsers */
   font-weight: 100 1000;
   font-display: fallback;
@@ -123,4 +123,9 @@ input:focus-within {
 }
 .selectStemp__indicator-separator {
   display: none !important;
+}
+
+.required::after {
+  content: "*";
+  color: red;
 }
