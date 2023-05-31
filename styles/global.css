@@ -132,3 +132,15 @@ input:focus-within {
 video {
   object-fit: cover;
 }
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  opacity: 1 !important;
+  width: 6px;
+  height: 6px;
+}
+.swiper-pagination-bullet-active {
+  width: 16px !important;
+  height: 6px !important;
+  border-radius: 6px !important;
+}

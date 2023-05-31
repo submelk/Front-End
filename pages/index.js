@@ -1,5 +1,3 @@
-import ReactPlayer from "react-player";
-
 import Head from "next/head";
 import Image from "next/image";
 
@@ -31,6 +29,7 @@ import { getHomePageData } from "../APIGate/public";
 // import useMobileDetect from "../components/isMobile";
 import { useEffect, useState } from "react";
 import HomePageVideo from "../components/submelk/homePage/video";
+import HomePageProjectList from "../components/submelk/homePage/homePageProjectList";
 // import CarsSlider from "../components/carsSlider";
 
 export default function Home(
@@ -43,7 +42,6 @@ export default function Home(
   // });
   // const isMobileValue = isMobile;
 
-
   return (
     <>
       <div
@@ -55,7 +53,7 @@ export default function Home(
         </button>
       </div>
       <div className="bg-[#005BEA]">
-        <div className="container text-white mx-auto flex items-stretch justify-between pt-14 gap-14">
+        <div className="container text-white mx-auto flex items-stretch justify-between py-14 gap-14">
           <div className="w-1/2">
             <h2 className="font-bold text-2xl mb-4">صاب‌ملک چیست؟</h2>
             <p className="text-justify" style={{ lineHeight: "45px" }}>
@@ -73,10 +71,14 @@ export default function Home(
           </div>
           <div className="w-1/2 relative">
             <div className="bg-white rounded-[10px] h-[345px] w-full">
-             <HomePageVideo/>
+              <HomePageVideo />
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <HomePageProjectList />
       </div>
     </>
   );
