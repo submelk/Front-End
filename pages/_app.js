@@ -38,11 +38,6 @@ export default function MyApp({ Component, pageProps }) {
         </Layout>
       </WindowWrapper>
 
-      {/* <style jsx>
-        .container {
-          
-        } */}
-      {/* </style> */}
     </>
   );
 }

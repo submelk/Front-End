@@ -129,3 +129,6 @@ input:focus-within {
   content: "*";
   color: red;
 }
+video {
+  object-fit: cover;
+}
