@@ -17,6 +17,8 @@ const HomePageMazaya = () => {
         <link rel="preload" href="/img/submelk/mazaya/7_.png" as="image" />
         <link rel="preload" href="/img/submelk/mazaya/8_.png" as="image" />
         <link rel="preload" href="/img/submelk/mazaya/9_.png" as="image" />
+        <link rel="preload" href="/img/submelk/mazaya/10_.png" as="image" />
+        <link rel="preload" href="/img/submelk/mazaya/11_.png" as="image" />
       </Head>
 
       <div className="flex flex-col lg:flex-row items-start justify-around">
@@ -258,7 +260,7 @@ const HomePageMazaya = () => {
           </button>
         </div>
         <div className="mb-8 lg:mb-0">
-          <Image
+          {/* <Image
             src={`/img/submelk/mazaya/${step}_.png`}
             width="830"
             height="830"
@@ -269,6 +271,14 @@ const HomePageMazaya = () => {
             onLoadStart={() => console.log("onload start")}
             onLoad={() => console.log("onload")}
             onLoadingComplete={() => console.log("load compl")}
+            loadsta
+          /> */}
+          <img
+            src={`/img/submelk/mazaya/${step}_.png`}
+            width="830"
+            height="830"
+            alt="مزایا"
+            className="rounded-3xl"
           />
         </div>
 
