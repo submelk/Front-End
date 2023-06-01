@@ -266,6 +266,9 @@ const HomePageMazaya = () => {
             className="rounded-3xl"
             placeholder="empty"
             priority
+            onLoadStart={() => console.log("onload start")}
+            onLoad={() => console.log("onload")}
+            onLoadingComplete={() => console.log("load compl")}
           />
         </div>
 
