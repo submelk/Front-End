@@ -52,7 +52,7 @@ export default function Home(
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 1300,
       offset: 200,
     });
   }, []);
