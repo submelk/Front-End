@@ -38,6 +38,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -128,6 +129,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -218,6 +220,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -308,6 +311,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -398,6 +402,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -488,6 +493,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -578,6 +584,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -668,6 +675,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
@@ -758,6 +766,7 @@ const HomePageProjectList = () => {
                 pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
                 modules={[Pagination]}
+                nested
                 className="mySwiper2"
               >
                 <SwiperSlide>
