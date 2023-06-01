@@ -9,6 +9,9 @@ import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // import PorscheImg from "/public/img/brands/Porsche.svg";
 // import BenzImg from "/public/img/brands/Benz.svg";
 // import MazImg from "/public/img/brands/Maz.svg";
@@ -46,6 +49,13 @@ export default function Home(
   //   // initialData: preData,
   // });
   // const isMobileValue = isMobile;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 200,
+    });
+  }, []);
 
   return (
     <>
@@ -116,8 +126,46 @@ export default function Home(
         </div>
         {/* <style>.cls-1{fill:none;}</style> */}
         <div>
-          <div className="max-w-[918px] mx-auto mt-20">
-            <svg className="xxxx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 998 1600.12">
+          <div className="max-w-[918px] mx-auto mt-20 relative">
+            <div className="font-bold text-2xl text-black pt-7 absolute right-0 left-0 top-0">
+              <div className="pr-24" data-aos="fade-right">
+                شناسایی‌پروژه‌های
+                <div>ساختمانی‌کم‌ریسک‌وپرسود</div>
+              </div>
+              <div className="pl-14 float-left pt-16" data-aos="fade-left">
+                ارزش‌گذاری‌پروژه‌هادرهرمرحله
+                <div>برای‌قیمت‌گذاری‌عادلانه</div>
+              </div>
+              <div className="pr-24 clear-both pt-16" data-aos="fade-right">
+                امکان‌مشارکت‌باهرمیزان‌سرمایه
+                <div>ازطریق‌خرید‌صاب‌پروژه‌ها</div>
+              </div>
+              <div className="pl-14 float-left pt-16" data-aos="fade-left">
+                مشاوره‌رایگان‌اقتصادی‌وحقوقی
+                <div>باسرمایه‌گذاران</div>
+              </div>
+              <div className="pr-24 clear-both pt-16" data-aos="fade-right">
+                نظارت‌مستمربرفرآیندساخت‌و
+                <div>گزارش‌دهی‌پیشرفت‌پروژه‌ها</div>
+              </div>
+              <div className="pl-0 float-left pt-16" data-aos="fade-left">
+                امکان‌خریدوفروش‌صاب‌های‌سرمایه‌گذاران‌به
+                <div>بالاترین‌قیمت‌دربازارثانویه‌پلتفرم‌صاب‌ملک</div>
+              </div>
+              <div className="pr-24 clear-both pt-16" data-aos="fade-right">
+                تسهیل‌در‌فروش‌واحدها
+                <div>باکارآمدترین‌ابزارها</div>
+              </div>
+              <div className="pl-24 float-left pt-16" data-aos="fade-left">
+                تسهیم‌کامل‌سودمیان‌صاب
+                <div>داران‌باتوجه‌هزینه‌تمام‌شده</div>
+              </div>
+            </div>
+            <svg
+              className="xxxx"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 998 1600.12"
+            >
               <g data-name="Layer 2">
                 <g data-name="Layer 1">
                   <path d="M58.67 451.44L58.67 778.44" className="cls-1"></path>
@@ -240,8 +288,6 @@ export default function Home(
           </div>
         </div>
       </div>
-
-     
     </>
   );
 }

@@ -19,6 +19,7 @@ const HomePageMazaya = () => {
         <link rel="preload" href="/img/submelk/mazaya/9_.png" as="image" />
         <link rel="preload" href="/img/submelk/mazaya/10_.png" as="image" />
         <link rel="preload" href="/img/submelk/mazaya/11_.png" as="image" />
+        <link rel="preload" href="/img/submelk/mazaya/12_.png" as="image" />
       </Head>
 
       <div className="flex flex-col lg:flex-row items-start justify-around">
