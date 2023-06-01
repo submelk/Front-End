@@ -30,7 +30,7 @@ const CustomersSlider = () => {
             <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
               <div className="w-full text-center absolute -top-14">
                 <Image
-                  src="/img/submelk/mazaya/1.png"
+                  src="/img/submelk/mazaya/1_.png"
                   className="object-cover mx-auto rounded-full"
                   width="116"
                   height="116"
@@ -54,7 +54,7 @@ const CustomersSlider = () => {
             <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
               <div className="w-full text-center absolute -top-14">
                 <Image
-                  src="/img/submelk/mazaya/1.png"
+                  src="/img/submelk/mazaya/1_.png"
                   className="object-cover mx-auto rounded-full"
                   width="116"
                   height="116"
@@ -78,7 +78,7 @@ const CustomersSlider = () => {
             <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
               <div className="w-full text-center absolute -top-14">
                 <Image
-                  src="/img/submelk/mazaya/1.png"
+                  src="/img/submelk/mazaya/1_.png"
                   className="object-cover mx-auto rounded-full"
                   width="116"
                   height="116"
@@ -102,7 +102,7 @@ const CustomersSlider = () => {
             <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
               <div className="w-full text-center absolute -top-14">
                 <Image
-                  src="/img/submelk/mazaya/1.png"
+                  src="/img/submelk/mazaya/1_.png"
                   className="object-cover mx-auto rounded-full"
                   width="116"
                   height="116"
@@ -126,7 +126,7 @@ const CustomersSlider = () => {
             <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
               <div className="w-full text-center absolute -top-14">
                 <Image
-                  src="/img/submelk/mazaya/1.png"
+                  src="/img/submelk/mazaya/1_.png"
                   className="object-cover mx-auto rounded-full"
                   width="116"
                   height="116"
@@ -150,7 +150,7 @@ const CustomersSlider = () => {
             <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
               <div className="w-full text-center absolute -top-14">
                 <Image
-                  src="/img/submelk/mazaya/1.png"
+                  src="/img/submelk/mazaya/1_.png"
                   className="object-cover mx-auto rounded-full"
                   width="116"
                   height="116"

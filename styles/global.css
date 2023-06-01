@@ -145,7 +145,7 @@ video {
   border-radius: 6px !important;
 }
 
-@keyframes strok {
+/* @keyframes strok {
   100% {
     stroke-dashoffset: 400;
   }
@@ -153,8 +153,6 @@ video {
 
 .xxxx {
   animation: strok 1.5s reverse;
-  /* width: 2.6em; */
-  /* height: 2.6em; */
   stroke: red;
   fill: transparent;
   stroke-width: 1pt;
@@ -162,4 +160,4 @@ video {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 400;
-}
+} */

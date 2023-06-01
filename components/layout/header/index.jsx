@@ -62,9 +62,14 @@ const Header = () => {
               درباره ما
             </Link>
           </div>
-          <div className="font-bold">
-            <span className="ml-4">شماره تماس</span>
-            <span className="text-lg">۰۲۱۲۸۳۰</span>
+          <div className="font-bold flex items-center gap-8">
+            <div>
+              <span className="ml-4">شماره تماس</span>
+              <span className="text-lg">۰۲۱۲۸۳۰</span>
+            </div>
+            <button className="text-[#005BEA] bg-white rounded-lg py-3 px-9">
+              ورود | ثبت نام
+            </button>
           </div>
         </div>
       </header>
