@@ -16,16 +16,18 @@ const Header = () => {
   const [isScollred, setIsScollred] = useState(false);
 
   useEffect(() => {
-    window.onscroll = function () {
+    const fff = function () {
       var top = window.pageYOffset || document.documentElement.scrollTop;
-      if (top > 100 && !isScollred) {
+      if (top > 50 && !isScollred) {
         setIsScollred(true);
         return;
       }
 
       setIsScollred(false);
     };
-    return () => {};
+    window.addEventListener("scroll", fff);
+
+    return () => window.removeEventListener("scroll", fff);
   }, []);
 
   return (

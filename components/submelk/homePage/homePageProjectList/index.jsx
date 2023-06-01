@@ -24,7 +24,7 @@ const HomePageProjectList = () => {
         slidesPerView="auto"
       >
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -114,7 +114,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -204,7 +204,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -294,7 +294,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -384,7 +384,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -474,7 +474,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -564,7 +564,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -654,7 +654,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
@@ -744,7 +744,7 @@ const HomePageProjectList = () => {
           </button>
         </SwiperSlide>
         <SwiperSlide className="pb-4">
-          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden flex flex-col shadowSlideCard">
+          <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
             <div className="relative">
               <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
                 در حال ساخت
