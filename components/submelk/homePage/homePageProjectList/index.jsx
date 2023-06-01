@@ -22,6 +22,12 @@ const HomePageProjectList = () => {
         className="mySwiper2"
         simulateTouch={false}
         slidesPerView="auto"
+        centeredSlides
+        breakpoints={{
+          740: {
+            centeredSlides: false,
+          },
+        }}
       >
         <SwiperSlide className="pb-4">
           <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
@@ -35,8 +41,10 @@ const HomePageProjectList = () => {
                   "--swiper-pagination-color": "#fff",
                 }}
                 spaceBetween={10}
-                pagination={true}
                 // thumbs={{ swiper: thumbsSwiper }}
+                pagination={{
+                  clickable: true,
+                }}
                 modules={[Pagination]}
                 nested
                 className="mySwiper2"
@@ -842,7 +850,7 @@ const HomePageProjectList = () => {
             </div>
           </button>
         </SwiperSlide>
-        <div className="swiperLeft"></div>
+        <div className="swiperLeft hidden lg:block"></div>
       </Swiper>
 
       <style jsx global>{`

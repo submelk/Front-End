@@ -70,7 +70,11 @@ const Header = () => {
       </header>
 
       <header className="lg:hidden pt-16">
-        <div className="flex justify-between items-center fixed top-0 right-0 left-0 bg-[#005BEA] text-white z-20 px-2 py-5">
+        <div
+          className={`flex justify-between items-center fixed top-0 right-0 left-0 bg-[#005BEA] text-white z-20 px-2 ${
+            !isScollred ? "py-5" : "py-3"
+          } transition-all`}
+        >
           <div className="flex items-center gap-1">
             <button>
               <svg

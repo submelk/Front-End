@@ -7,7 +7,7 @@ const HomePageFAQ = () => {
   return (
     <div>
       <div className="font-semibold text-[#363636]">
-        {[...Array(9)].map((item, indx) => (
+        {[...Array(5)].map((item, indx) => (
           <div key={indx} className="bg-white p-4 rounded-[10px] mb-4">
             <button
               onClick={() => setOpenOne(indx)}
