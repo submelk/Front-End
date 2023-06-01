@@ -250,6 +250,7 @@ const HomePageMazaya = () => {
           height="830"
           alt="مزایا"
           className="rounded-3xl"
+          placeholder="empty"
         />
       </div>
 

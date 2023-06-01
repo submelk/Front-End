@@ -117,7 +117,7 @@ export default function Home(
         {/* <style>.cls-1{fill:none;}</style> */}
         <div>
           <div className="max-w-[918px] mx-auto mt-20">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 998 1600.12">
+            <svg className="xxxx" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 998 1600.12">
               <g data-name="Layer 2">
                 <g data-name="Layer 1">
                   <path d="M58.67 451.44L58.67 778.44" className="cls-1"></path>
