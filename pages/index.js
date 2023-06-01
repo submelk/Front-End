@@ -53,7 +53,8 @@ export default function Home(
   useEffect(() => {
     AOS.init({
       duration: 1300,
-      offset: 200,
+      offset: 150,
+      delay: 100,
     });
   }, []);
 
@@ -127,36 +128,57 @@ export default function Home(
         {/* <style>.cls-1{fill:none;}</style> */}
         <div>
           <div className="max-w-[918px] mx-auto mt-20 relative">
-            <div className="font-bold text-2xl text-black pt-7 absolute right-0 left-0 top-0">
-              <div className="pr-24" data-aos="fade-right">
+            <div className="font-bold lg:text-2xl text-black pt-1 lg:pt-7 absolute right-0 left-0 top-0">
+              <div className="pr-9 lg:pr-24" data-aos="fade-right">
                 شناسایی‌پروژه‌های
                 <div>ساختمانی‌کم‌ریسک‌وپرسود</div>
               </div>
-              <div className="pl-14 float-left pt-16" data-aos="fade-left">
+              <div
+                className="pl-8 lg:pl-14 float-left pt-4 lg:pt-16"
+                data-aos="fade-left"
+              >
                 ارزش‌گذاری‌پروژه‌هادرهرمرحله
                 <div>برای‌قیمت‌گذاری‌عادلانه</div>
               </div>
-              <div className="pr-24 clear-both pt-16" data-aos="fade-right">
+              <div
+                className="pr-9 lg:pr-24 clear-both pt-3 lg:pt-16"
+                data-aos="fade-right"
+              >
                 امکان‌مشارکت‌باهرمیزان‌سرمایه
                 <div>ازطریق‌خرید‌صاب‌پروژه‌ها</div>
               </div>
-              <div className="pl-14 float-left pt-16" data-aos="fade-left">
+              <div
+                className="pl-8 lg:pl-14 float-left pt-3 lg:pt-16"
+                data-aos="fade-left"
+              >
                 مشاوره‌رایگان‌اقتصادی‌وحقوقی
                 <div>باسرمایه‌گذاران</div>
               </div>
-              <div className="pr-24 clear-both pt-16" data-aos="fade-right">
+              <div
+                className="pr-9 lg:pr-24 clear-both pt-3 lg:pt-16"
+                data-aos="fade-right"
+              >
                 نظارت‌مستمربرفرآیندساخت‌و
                 <div>گزارش‌دهی‌پیشرفت‌پروژه‌ها</div>
               </div>
-              <div className="pl-0 float-left pt-16" data-aos="fade-left">
+              <div
+                className="pl-1 lg:pl-14 float-left pt-2 lg:pt-16"
+                data-aos="fade-left"
+              >
                 امکان‌خریدوفروش‌صاب‌های‌سرمایه‌گذاران‌به
                 <div>بالاترین‌قیمت‌دربازارثانویه‌پلتفرم‌صاب‌ملک</div>
               </div>
-              <div className="pr-24 clear-both pt-16" data-aos="fade-right">
+              <div
+                className="pr-9 lg:pr-24 clear-both pt-3 lg:pt-16"
+                data-aos="fade-right"
+              >
                 تسهیل‌در‌فروش‌واحدها
                 <div>باکارآمدترین‌ابزارها</div>
               </div>
-              <div className="pl-24 float-left pt-16" data-aos="fade-left">
+              <div
+                className="pl-4 lg:pl-14 float-left pt-2 lg:pt-16"
+                data-aos="fade-left"
+              >
                 تسهیم‌کامل‌سودمیان‌صاب
                 <div>داران‌باتوجه‌هزینه‌تمام‌شده</div>
               </div>
