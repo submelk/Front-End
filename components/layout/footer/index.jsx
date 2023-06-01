@@ -4,141 +4,204 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className=" text-white mt-20">
-        <div className="bg-[#424750] w-full py-8 lg:px-16 px-8">
-          <div className="flex justify-center lg:justify-start">
-            <input
-              className="inputProj w-[480px] max-w-[75%] mr-3"
-              placeholder="Geben sie ihre E-Mailadresse ein"
-              type="text"
-            />
-            <button className="bg-[#418266] rounded-xl lg:px-5 px-2 self-stretch">
-              einreichen
-            </button>
-          </div>
-
-          <div className="hidden md:flex my-12 items-start px-4">
-            <div className="lg:w-1/3">
-              <div>Informationen</div>
-              <ul className="mt-5">
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Versandoptionen</Link>
+      <footer className="mt-14">
+        <div className="container mx-auto px-4 lg:px-32 pt-12 pb-6 flex flex-col lg:flex-row items-stretch justify-between gap-14">
+          <div>
+            <div>
+              <div className="text-[#005BEA] font-bold text-lg mb-4">اهداف</div>
+              <ul className="text-[#5D6F7E] text-sm">
+                <li className="mb-3">
+                  ایجاد فرصت‌های جذاب در سرمایه گذاری مسکن برای همه ی افراد
                 </li>
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Zahlungsarten</Link>
+                <li className="mb-3">
+                  ایجاد تحول در فرآیند مدیریت ساخت و جذب سرمایه در صنعت ساختمان
+                  کشور
                 </li>
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Impressum</Link>
-                </li>
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">AGB</Link>
+                <li className="mb-3">
+                  فراهم کردن امنیت در سرمایه‌گذاری به خصوص برای سرمایه های خرد{" "}
                 </li>
               </ul>
             </div>
-            <div className="lg:w-1/3">
-              <div>Wege der Kommunikation</div>
-              <ul className="mt-5">
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Kontakt</Link>
-                </li>
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Seitenübersicht</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="lg:w-1/3">
-              <div>Kundenservice</div>
-              <ul className="mt-5">
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Konto</Link>
-                </li>
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Auftragsverlauf</Link>
-                </li>
-                <li className="opacity-80 hover:opacity-100 text-xs mb-3">
-                  <Link href="#">Wunschliste</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="flex md:hidden pt-14">
-            <div className="w-1/2 flex flex-col items-start">
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Versandoptionen</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Zahlungsarten</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Impressum</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">AGB</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Kontakt</Link>
-              </button>
-            </div>
-            <div className="w-1/2 flex flex-col items-start">
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Seitenübersicht</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Konto</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Auftragsverlauf</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Wunschliste</Link>
-              </button>
-              <button className="opacity-80 hover:opacity-100 text-xs mb-3">
-                <Link href="#">Wunschliste</Link>
-              </button>
-            </div>
-          </div>
-
-          <hr className="border-[#A3A6AB]" />
-
-          <div className="mt-6">
-            <div className="flex justify-between px-4 md:pr-14">
-              <div>
-                <h3 className="font-bold text-3xl mb-3">Printeam</h3>
-                <div className="opacity-80 text-sm">
-                  <div className="mb-3">
-                    EXPRESS-SERVICE ohne Expresszuschlag
-                  </div>
-                  <div className="mb-3">
-                    Stempel jetzt bestellen, in 1 Stunde abholen!
-                  </div>
-                  <div className="mb-3">trodaf COLO</div>
-                  <div className="mb-3">
-                    Österreichweite Lieferung in 1-2 Tagen!
-                  </div>
-                  <div className="mb-3">
-                    Versandkostenfrei ab € 100,- Bestellwert
-                  </div>
-                </div>
+            <div>
+              <div className="text-[#005BEA] font-bold text-lg mb-4 mt-9">
+                اصول ما
               </div>
-              <div className="hidden md:block">
-                <div className="mb-7 flex gap-3 items-center">
-                  <Image src="/img/stamp/location.svg" width={18} height={24} />
-                  <span>1050 Wien : Wiedner Hauptstraße 141-143</span>
-                </div>
-                <div className="mb-5 flex gap-3 items-center">
-                  <Image src="/img/stamp/phone2.svg" width={18} height={18} />
-                  <span>+43 (0)1 9200 146</span>
-                </div>
-              </div>
+              <ul className="text-[#5D6F7E] text-sm">
+                <li className="mb-3">شفافیت و پاسخگویی</li>
+                <li className="mb-3">اصالت راهکارهای علمی و تکنولوژیکی</li>
+                <li className="mb-3">خطرپذیری مسئولانه</li>
+              </ul>
+            </div>
+          </div>
+          <div className="lg:border-r lg:border-l lg:grow lg:pr-14">
+            <div className="text-[#005BEA] font-bold text-lg mb-5">
+              دسترسی سریع
+            </div>
+            <ul className="text-sm font-bold text-[#5D6F7E]">
+              <li className="mb-3">تماس با ما</li>
+              <li className="mb-3">درباره ما</li>
+              <li className="mb-3">قوانین و مقررات</li>
+              <li className="mb-3">سوالات متداول</li>
+              <li className="mb-3">بلاگ</li>
+              <li className="mb-3">راهنما</li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-[#005BEA] font-bold text-lg mb-4">
+              پشتیبانی ، رضایت
+            </div>
+            <div className="flex items-center justify-between gap-6 mt-6 border-b pb-9 mb-5">
+              <Image
+                src="/img/submelk/cert/1.png"
+                width="99"
+                height="99"
+                className="border rounded-lg"
+              />
+              <Image
+                src="/img/submelk/cert/2.png"
+                width="99"
+                height="99"
+                className="border rounded-lg"
+              />
+              <Image
+                src="/img/submelk/cert/3.png"
+                width="99"
+                height="99"
+                className="border rounded-lg"
+              />
+            </div>
+            <div className="flex items-center justify-between text-[#173046] font-medium">
+              <div>شماره تماس</div>
+              <div className="text-lg">0212830</div>
+            </div>
+            <div className="hidden lg:flex items-center mt-5 justify-between text-[#173046] font-medium ">
+              <span>آدرس:</span>
+              <span className="mr-2 text-sm ">
+                تهران، اختیاریه، خیابان رحمانی، پلاک 131، طبقه پنجم
+              </span>
+            </div>
+            <div className="mt-8 flex items-center justify-between gap-7">
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
+              <Link href="#">
+                <svg
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.4228 21.629H3.7998C3.00472 21.6272 2.24274 21.3105 1.68053 20.7483C1.11832 20.1861 0.801653 19.4241 0.799805 18.629L0.799805 3C0.801653 2.20492 1.11832 1.44293 1.68053 0.880722C2.24274 0.318513 3.00472 0.00184873 3.7998 0L19.4198 0C20.2149 0.00184873 20.9769 0.318513 21.5391 0.880722C22.1013 1.44293 22.418 2.20492 22.4198 3V18.625C22.419 19.4203 22.1032 20.1828 21.5416 20.7458C20.9799 21.3088 20.2181 21.6264 19.4228 21.629ZM12.8148 11.414V19.224H15.8148V11.414H17.8368L18.2168 9.014H15.8168V7.645C15.8168 6.982 15.8648 6.608 16.8468 6.608H18.2198V4.208H16.1748C15.7018 4.1633 15.2247 4.21942 14.775 4.37266C14.3252 4.5259 13.9131 4.77278 13.5658 5.097C13.0118 5.79516 12.7438 6.67768 12.8158 7.566V9.013H11.0158V11.413L12.8148 11.414Z"
+                    fill="#646464"
+                  />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
-
-        <div className="bg-[#2C3035] text-center py-7 text-xs">
-          <div>Copyright Printeam 2023</div>
+        <div
+          className="text-[#5D6F7E] py-8 text-sm mt-6 text-center px-3"
+          style={{ boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
+        >
+          تمامی خدمات این وب سایت دارای مجوزهای لازم از مراجع مربوطه می باشد و
+          کليه حقوق اين سايت متعلق به صاب‌ملک می‌باشد.
         </div>
       </footer>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        footer {
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+          background: white;
+        }
+
+        li::before {
+          content: "• ";
+          color: #005bea;
+          font-size: 20px;
+        }
+      `}</style>
     </>
   );
 };

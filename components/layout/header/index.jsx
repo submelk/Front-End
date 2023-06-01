@@ -1,16 +1,41 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const DesktopMenu = dynamic(() => import("../../DesktopMenu"), {
   ssr: false,
 });
 
 const Header = () => {
+  const router = useRouter();
+  const { pathname } = router;
+
+  const [isScollred, setIsScollred] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = function () {
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100 && !isScollred) {
+        setIsScollred(true);
+        return;
+      }
+
+      setIsScollred(false);
+    };
+    return () => {};
+  }, []);
+
   return (
     <>
       <header className="pt-24 hidden lg:block">
-        <div className="flex justify-between items-center fixed top-0 right-0 left-0 bg-[#005BEA] text-white z-20 px-20 py-8">
+        <div
+          className={`flex justify-between items-center fixed top-0 right-0 left-0 bg-[#005BEA] text-white z-20 px-20 transition-all ${
+            !isScollred ? "py-8" : "py-4"
+          }`}
+        >
           <div className="flex items-center gap-8">
             <button className="w-[170px] h-[38px] relative ">
               <Image src="/img/submelk/logo.svg" fill />
@@ -43,7 +68,7 @@ const Header = () => {
       </header>
 
       <header className="lg:hidden pt-16">
-        <div className="flex justify-between items-center fixed top-0 right-0 left-0 bg-[#005BEA] text-white z-20 px-4 py-5">
+        <div className="flex justify-between items-center fixed top-0 right-0 left-0 bg-[#005BEA] text-white z-20 px-2 py-5">
           <div className="flex items-center gap-1">
             <button>
               <svg
@@ -80,8 +105,8 @@ const Header = () => {
               <Image src="/img/submelk/logo.svg" fill />
             </button>
           </div>
-          <div className="font-bold flex items-center gap-2">
-            <a href="tel:0212830" className="text-lg">
+          <div className="font-bold flex items-center gap-2 ">
+            <a href="tel:0212830" className="">
               ۰۲۱۲۸۳۰
             </a>
             <span>
@@ -104,6 +129,11 @@ const Header = () => {
               </svg>
             </span>
           </div>
+          {!["/login", "register"].includes(pathname) && (
+            <button className="text-[#005BEA] bg-white rounded-lg py-2 px-2">
+              ورود | ثبت نام
+            </button>
+          )}
         </div>
       </header>
 

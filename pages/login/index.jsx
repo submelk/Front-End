@@ -55,13 +55,6 @@ const Login = () => {
               </Link>
             </div>
 
-            <div
-              className="text-center text-sm fixed inset-0 w-full h-full bg-no-repeat -z-10 "
-              style={{
-                backgroundImage: "url(/img/submelk/pattern.svg)",
-                backgroundPosition: "right bottom",
-              }}
-            ></div>
           </div>
 
           <div

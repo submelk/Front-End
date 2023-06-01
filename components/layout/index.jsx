@@ -1,12 +1,16 @@
+import { useRouter } from "next/router";
 import Footer from "./footer";
 import Header from "./header";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+  const { pathname } = router;
+
   return (
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      {!["/login", "register"].includes(pathname) && <Footer />}
     </>
   );
 };
