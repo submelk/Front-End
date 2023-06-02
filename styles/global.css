@@ -190,17 +190,17 @@ video {
   /* , opacityAn 0.1s 0.5s linear forwards; */
 }
 .firstLine[data-aos="active11"] {
-  animation: completeLine 3.5s 3s linear forwards;
+  animation: completeLine 3.5s 6s linear forwards;
 }
 .firstLine.active {
-  animation: completeLine 3.5s 3s linear forwards;
+  animation: completeLine 3.5s 6s linear forwards;
 }
 
 .curveFirst[data-aos="active11"] {
-  animation: completeLine 6.5s 3s linear forwards;
+  animation: completeLine 6.5s 6s linear forwards;
 }
 .curveFirst.active {
-  animation: completeLine 6.5s 3s linear forwards;
+  animation: completeLine 6.5s 6s linear forwards;
 }
 @keyframes opacityAn {
   100% {
