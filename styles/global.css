@@ -177,9 +177,9 @@ video {
 .firstLine[data-aos="active11"] {
   animation: completeLine 3.5s 0s linear forwards;
 }
-/* .firstLine.active {
+.firstLine.active {
   animation: completeLine 3.5s 0s linear forwards;
-} */
+}
 
 .curveFirst[data-aos="active11"] {
   animation: completeLine 6.5s 0s linear forwards;
