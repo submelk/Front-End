@@ -22,8 +22,8 @@ const HomePageMazaya = () => {
         <link rel="preload" href="/img/submelk/mazaya/12_.png" as="image" />
       </Head>
 
-      <div className="flex flex-col lg:flex-row items-start justify-around">
-        <div className="w-full lg:w-1/4 flex items-center overflow-x-auto mb-7 lg:mb-0 lg:flex-wrap justify-between px-6 gap-4">
+      <div className="flex flex-col lg:flex-row items-start justify-around chromeScrollBar">
+        <div className="w-full lg:w-1/4 flex items-center overflow-x-auto mb-7 lg:mb-0 lg:flex-wrap justify-between px-6 gap-4  pb-6">
           <button
             onClick={() => setStep(1)}
             className={`w-[103px] h-[103px] lg:w-[120px] lg:h-[120px] flex items-center justify-center ${
