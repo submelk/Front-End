@@ -145,19 +145,128 @@ video {
   border-radius: 6px !important;
 }
 
-/* @keyframes strok {
-  100% {
-    stroke-dashoffset: 400;
-  }
-}
-
-.xxxx {
+/* .xxxx {
   animation: strok 1.5s reverse;
-  stroke: red;
+  stroke: black;
   fill: transparent;
-  stroke-width: 1pt;
+  stroke-width: 5px;
   stroke-miterlimit: 10;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-dasharray: 400;
 } */
+
+.curveFirst {
+  fill-opacity: 0;
+  stroke-width: 8px;
+  stroke: black;
+  stroke-dashoffset: 3000;
+  stroke-dasharray: 3000;
+  stroke-opacity: 1;
+}
+
+.firstLine {
+  fill-opacity: 0;
+  stroke-width: 7px;
+  stroke: black;
+  stroke-dashoffset: 3000;
+  stroke-dasharray: 3000;
+  stroke-opacity: 1;
+  /* , opacityAn 0.1s 0.5s linear forwards; */
+}
+.firstLine.active {
+  margin: 1px;
+  animation: completeLine 3.5s 0s linear forwards;
+}
+
+.curveFirst.active {
+  animation: completeLine 6.5s 0s linear forwards;
+}
+@keyframes opacityAn {
+  100% {
+    stroke-opacity: 1;
+  }
+}
+@keyframes completeLine {
+  0% {
+    stroke-dashoffset: 3000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes completeLineRev {
+  0% {
+    stroke-dashoffset: 3000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.lineD2 {
+  animation-delay: 0.2s !important;
+}
+.lineD3 {
+  animation-delay: 0.4s !important;
+}
+.lineD4 {
+  animation-delay: 0.6s !important;
+}
+.lineD5 {
+  animation-delay: 0.8s !important;
+}
+.lineD6 {
+  animation-delay: 1s !important;
+}
+.lineD7 {
+  animation-delay: 1.2s !important;
+}
+.lineD8 {
+  animation-delay: 1.4s !important;
+}
+.lineD9 {
+  animation-delay: 1.6s !important;
+}
+
+.curveD2 {
+  animation-delay: 3.2s !important;
+}
+
+/* 3 */
+.curveD3 {
+  animation-delay: 3.4s !important;
+}
+/* 4 */
+.curveD4 {
+  animation-delay: 3.6s !important;
+}
+/* 5 */
+.curveD5 {
+  animation-delay: 3.8s !important;
+}
+/* 7 */
+.curveD6 {
+  animation-delay: 3s !important;
+}
+.curveD7 {
+  animation-delay: 9s !important;
+}
+.curveD8 {
+  animation-delay: 4.4s !important;
+}
+.curveD9 {
+  animation-delay: 4.6s !important;
+}
+.curveD10 {
+  animation-delay: 4.8s !important;
+}
+.curveD11 {
+  animation-delay: 5s !important;
+}
+.curveD12 {
+  animation-delay: 5.2s !important;
+}
+.curveD13 {
+  animation-delay: 5.4s !important;
+}
