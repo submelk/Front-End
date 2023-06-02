@@ -7,9 +7,9 @@ export default function useOnScreen(ref) {
 
   const observer = useMemo(
     () =>
-      new IntersectionObserver(([entry]) =>
-        setIntersecting(entry.isIntersecting)
-      ),
+      new IntersectionObserver(([entry]) => {
+        setIntersecting(entry.isIntersecting);
+      }),
     [ref]
   );
 

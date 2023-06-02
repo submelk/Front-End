@@ -174,11 +174,16 @@ video {
   stroke-opacity: 1;
   /* , opacityAn 0.1s 0.5s linear forwards; */
 }
-.firstLine.active {
-  margin: 1px;
+.firstLine[data-aos="active11"] {
   animation: completeLine 3.5s 0s linear forwards;
 }
+/* .firstLine.active {
+  animation: completeLine 3.5s 0s linear forwards;
+} */
 
+.curveFirst[data-aos="active11"] {
+  animation: completeLine 6.5s 0s linear forwards;
+}
 .curveFirst.active {
   animation: completeLine 6.5s 0s linear forwards;
 }
