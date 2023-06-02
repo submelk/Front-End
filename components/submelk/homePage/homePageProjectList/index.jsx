@@ -854,9 +854,7 @@ const HomePageProjectList = () => {
       </Swiper>
 
       <style jsx global>{`
-        body {
-          background-color: #f7f7f9;
-        }
+      
 
         .swiperLeft {
           position: absolute;

@@ -46,7 +46,6 @@ export default function Home(
     // preData
   }
 ) {
-  
   // const { data } = useQuery(["getHomePageData"], getHomePageData, {
 
   //   // initialData: preData,
@@ -253,6 +252,11 @@ export default function Home(
           </div>
         </div>
       </div>
+      <style jsx global>{`
+        body {
+          background-color: #f7f7f9;
+        }
+      `}</style>
     </>
   );
 }
