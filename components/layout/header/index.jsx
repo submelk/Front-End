@@ -39,9 +39,11 @@ const Header = () => {
           }`}
         >
           <div className="flex items-center gap-8">
-            <button className="w-[170px] h-[38px] relative ">
-              <Image src="/img/submelk/logo.svg" fill />
-            </button>
+            <Link href="/">
+              <button className="w-[170px] h-[38px] relative ">
+                <Image src="/img/submelk/logo.svg" fill />
+              </button>
+            </Link>
             <div className="h-[30px] w-[1px] bg-[rgba(256,256,256,.4)]"></div>
             <Link href="/" className="font-semibold text-sm">
               صفحه اول
@@ -49,7 +51,7 @@ const Header = () => {
             <Link href="/" className="font-semibold text-sm">
               پروژه‌ها
             </Link>
-            <Link href="/" className="font-semibold text-sm">
+            <Link href="/faq" className="font-semibold text-sm">
               سوالات متداول
             </Link>
             <Link href="/" className="font-semibold text-sm">
@@ -58,7 +60,7 @@ const Header = () => {
             <Link href="/" className="font-semibold text-sm">
               تماس با ما
             </Link>
-            <Link href="/" className="font-semibold text-sm">
+            <Link href="/aboutUs" className="font-semibold text-sm">
               درباره ما
             </Link>
           </div>
