@@ -174,7 +174,7 @@ video {
 .curveFirst {
   fill-opacity: 0;
   stroke-width: 8px;
-  stroke: black;
+  stroke: #003f77;
   stroke-dashoffset: 3000;
   stroke-dasharray: 3000;
   stroke-opacity: 1;
@@ -183,7 +183,7 @@ video {
 .firstLine {
   fill-opacity: 0;
   stroke-width: 7px;
-  stroke: black;
+  stroke: #003f77;
   stroke-dashoffset: 3000;
   stroke-dasharray: 3000;
   stroke-opacity: 1;
@@ -192,16 +192,20 @@ video {
 /* .firstLine.aos-animate[data-aos="active11"] {
   animation: completeLine 3.5s 3s linear forwards;
 } */
-.firstLine.active {
+/* .firstLine.active {
   animation: completeLine 3.5s 3s linear forwards;
+} */
+.xxxx.active .firstLine,
+.xxxx.active .curveFirst {
+  animation: completeLine 3.5s 2s linear forwards;
 }
 
 /* .curveFirst.aos-animate[data-aos="active11"] {
   animation: completeLine 6.5s 3s linear forwards;
 } */
-.curveFirst.active {
+/* .curveFirst.active {
   animation: completeLine 6.5s 3s linear forwards;
-}
+} */
 @keyframes opacityAn {
   100% {
     stroke-opacity: 1;
@@ -286,3 +290,8 @@ video {
 .curveD13 {
   animation-delay: 5.4s !important;
 } */
+.ReactModal__Overlay {
+  z-index: 99;
+
+  background-color: rgba(0, 0, 0, 0.55) !important;
+}

@@ -57,6 +57,7 @@ export default function Home(
       duration: 1500,
       offset: 100,
       delay: 300,
+      once: true,
     });
   }, []);
 
