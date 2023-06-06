@@ -1,4 +1,10 @@
+import ProgressBar from "@ramonak/react-progress-bar";
 import Image from "next/image";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const ProjectId = () => {
   return (
@@ -112,8 +118,8 @@ const ProjectId = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="lg:w-1/2 flex items-center justify-between font-medium">
+            <div className="flex items-center justify-between pt-8">
+              <div className="lg:w-1/3 flex items-center justify-between font-medium">
                 <div className="">
                   <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
                     4,500
@@ -153,12 +159,397 @@ const ProjectId = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/2">sd</div>
+              <div className="lg:w-1/2 text-sm font-medium">
+                <div className="flex items-center justify-end gap-6 mb-4">
+                  <div>پیشرفت پروژه</div>
+                  <ProgressBar
+                    completed={84}
+                    maxCompleted={100}
+                    width={239}
+                    height={8}
+                    labelClassName="hidden"
+                    bgColor="#005BEA"
+                    baseBgColor="#EAEEF3"
+                  />
+                </div>
+                <div className="flex items-center justify-end gap-6">
+                  <div>تامین مالی</div>
+                  <ProgressBar
+                    completed={84}
+                    maxCompleted={100}
+                    width={239}
+                    height={8}
+                    labelClassName="hidden"
+                    bgColor="#005BEA"
+                    baseBgColor="#EAEEF3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="text-[#173046] mt-6 p-8"
+            style={{ "box-shadow": "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
+          >
+            <div className="border-b-2 border-b-[#F7F8FC] pb-9 mb-12 -mx-9 px-9">
+              <div className="font-bold mb-6">مشخصات فنی پروژه</div>
+              <p className="text-sm leading-10 font-medium">
+                ساختمانهای موجود و قدیمی که در محدوده عملیاتی پروژه و در محل
+                اجرا و استقرار بناهای جدید بوده و به منظور انجام کار، تخریب آنها
+                ضروری است، باید با نظر کارفرما طبق دستورات دستگاه نظارت
+                اندازهگیری، صورتمجلس و تخریب شوند. این موارد باید در مشخصات فنی
+                خصوصی ذکر گردند. قبل از شروع به تخریب ساختمانها باید مسائل ایمنی
+                و اصول فنی در مورد قطع و کنترل انشعابات خطوط آب، برق، تلفن و ...
+                با هماهنگی سازمانهای مسئول مراعات گردد. در صورت لزوم باید مصالح
+                حاصل از تخریب مطابق نظر دستگاه نظارت دستهبندی و در محلهای مناسب
+                انبار شوند.
+              </p>
+              <div className="flex items-center mt-8 gap-4 font-medium text-sm">
+                {[...Array(9)].map((item, indx) => (
+                  <div key={indx} className="bg-[#F4F4F4] rounded-lg px-3 py-2">
+                    اسکلت بتنی
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="font-bold mb-6">اطلاعات فنی پروژه</div>
+              <div className="flex items-center mt-8 gap-4 font-medium text-sm">
+                {[...Array(9)].map((item, indx) => (
+                  <div
+                    key={indx}
+                    className="bg-[#F4F4F4] rounded-lg px-3 py-2 flex gap-2"
+                  >
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11 12.1113L9.5177 10.6299"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.4823 10.6299L11 12.1113"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11 7.66528V12.1113"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M14.3347 12.8525V12.8525C14.3347 13.6711 13.6711 14.3348 12.8524 14.3348H9.14757C8.32892 14.3348 7.66528 13.6711 7.66528 12.8525V12.8525"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="11.0001"
+                        cy="11"
+                        r="7.50312"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    اسکلت بتنی
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div
+            className="text-[#173046] mt-6 p-8"
+            style={{ "box-shadow": "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
+          >
+            <div className="">
+              <div className="font-bold mb-6">گزارشات دوره ای</div>
+              <div className="border-b-2 border-b-[#F7F8FC] flex items-center gap-14 font-bold -mx-9 px-9 pb-3 mt-9 text-[#5D6F7E]">
+                <div className="tabActive">اسفند ۱۴۰۱</div>
+                <div>بهمن ۱۴۰۱</div>
+                <div>دی ۱۴۰۱</div>
+              </div>
+
+              <div className="py-8">
+                <div>
+                  <div
+                    className="font-bold p-4 bg-[#EAEAEA]"
+                    style={{ borderRadius: "8px 8px 0px 0px" }}
+                  >
+                    خرید زمین پروژه الماس یزدانشاه لاهیجان
+                  </div>
+
+                  <div
+                    className="bg-[#F4F4F4] text-[#5D6F7E] text-sm"
+                    style={{ borderRadius: "0px 0px 8px 8px" }}
+                  >
+                    <ul className="list-disc mr-9 leading-7 py-5">
+                      <li>زمین خریداری شد</li>
+                      <li>بتن خریداری شد</li>
+                      <li>سفال به میزان کافی تهیه گردید</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <Swiper
+                  style={{
+                    "--swiper-navigation-color": "#000",
+                    "--swiper-pagination-color": "#000",
+                  }}
+                  spaceBetween={30}
+                  navigation={true}
+                  // thumbs={{ swiper: thumbsSwiper }}
+                  modules={[Navigation]}
+                  className="mySwiper2"
+                  simulateTouch={false}
+                  slidesPerView="auto"
+                  centeredSlides
+                  breakpoints={{
+                    740: {
+                      centeredSlides: false,
+                    },
+                  }}
+                >
+                  <SwiperSlide className="pb-4">
+                    <Image
+                      src="/img/submelk/homeMain.png"
+                      width="219"
+                      height="138"
+                      className="rounded-lg h-[138px] object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="pb-4">
+                    <Image
+                      src="/img/submelk/homeMain.png"
+                      width="219"
+                      height="138"
+                      className="rounded-lg h-[138px] object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="pb-4">
+                    <Image
+                      src="/img/submelk/homeMain.png"
+                      width="219"
+                      height="138"
+                      className="rounded-lg h-[138px] object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="pb-4">
+                    <Image
+                      src="/img/submelk/homeMain.png"
+                      width="219"
+                      height="138"
+                      className="rounded-lg h-[138px] object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="pb-4">
+                    <Image
+                      src="/img/submelk/homeMain.png"
+                      width="219"
+                      height="138"
+                      className="rounded-lg h-[138px] object-cover"
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide className="pb-4">
+                    <Image
+                      src="/img/submelk/homeMain.png"
+                      width="219"
+                      height="138"
+                      className="rounded-lg h-[138px] object-cover"
+                    />
+                  </SwiperSlide>
+                  <div className="swiperLeft hidden lg:block"></div>
+                </Swiper>
+
+                <div className="my-8 font-bold text-sm">گزارش کامل دی ۱۴۰۱</div>
+
+                <div className="flex items-center gap-7">
+                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.8087 9.43502C17.1928 9.43502 18.314 10.5563 18.314 11.9404V11.9404C18.314 13.3246 17.1928 14.4458 15.8087 14.4458H9.91718C8.53303 14.4458 7.4118 13.3246 7.4118 11.9404V11.9404C7.4118 10.5563 8.53303 9.43502 9.91718 9.43502L10.7979 9.43502"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.35858 11.9409C3.97443 11.9409 2.8532 10.8197 2.8532 9.43552V9.43552C2.8532 8.05137 3.97443 6.93014 5.35858 6.93014H11.2501C12.6342 6.93014 13.7554 8.05137 13.7554 9.43552V9.43552C13.7554 10.8197 12.6342 11.9409 11.2501 11.9409L10.3334 11.9403"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    وبلاگ
+                  </div>
+                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.8087 9.43502C17.1928 9.43502 18.314 10.5563 18.314 11.9404V11.9404C18.314 13.3246 17.1928 14.4458 15.8087 14.4458H9.91718C8.53303 14.4458 7.4118 13.3246 7.4118 11.9404V11.9404C7.4118 10.5563 8.53303 9.43502 9.91718 9.43502L10.7979 9.43502"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.35858 11.9409C3.97443 11.9409 2.8532 10.8197 2.8532 9.43552V9.43552C2.8532 8.05137 3.97443 6.93014 5.35858 6.93014H11.2501C12.6342 6.93014 13.7554 8.05137 13.7554 9.43552V9.43552C13.7554 10.8197 12.6342 11.9409 11.2501 11.9409L10.3334 11.9403"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    وبلاگ
+                  </div>
+                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.8087 9.43502C17.1928 9.43502 18.314 10.5563 18.314 11.9404V11.9404C18.314 13.3246 17.1928 14.4458 15.8087 14.4458H9.91718C8.53303 14.4458 7.4118 13.3246 7.4118 11.9404V11.9404C7.4118 10.5563 8.53303 9.43502 9.91718 9.43502L10.7979 9.43502"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.35858 11.9409C3.97443 11.9409 2.8532 10.8197 2.8532 9.43552V9.43552C2.8532 8.05137 3.97443 6.93014 5.35858 6.93014H11.2501C12.6342 6.93014 13.7554 8.05137 13.7554 9.43552V9.43552C13.7554 10.8197 12.6342 11.9409 11.2501 11.9409L10.3334 11.9403"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    وبلاگ
+                  </div>
+                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                    <svg
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15.8087 9.43502C17.1928 9.43502 18.314 10.5563 18.314 11.9404V11.9404C18.314 13.3246 17.1928 14.4458 15.8087 14.4458H9.91718C8.53303 14.4458 7.4118 13.3246 7.4118 11.9404V11.9404C7.4118 10.5563 8.53303 9.43502 9.91718 9.43502L10.7979 9.43502"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.35858 11.9409C3.97443 11.9409 2.8532 10.8197 2.8532 9.43552V9.43552C2.8532 8.05137 3.97443 6.93014 5.35858 6.93014H11.2501C12.6342 6.93014 13.7554 8.05137 13.7554 9.43552V9.43552C13.7554 10.8197 12.6342 11.9409 11.2501 11.9409L10.3334 11.9403"
+                        stroke="#005BEA"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    وبلاگ
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-[287px]">1</div>
+        <div className="w-[287px]">
+          <div className="font-bold">ثبت پیشنهاد</div>
+          <div className="font-medium my-6">پروژه ساختمانی الماس یزدانشاه</div>
+          <div className="flex items-center justify-between">
+            <div className="text-[#5D6F7E] text-sm">وضعیت پروژه</div>
+            <div className="text-sm text-[#005BEA] border rounded-lg border-[#005BEA]">
+              به زودی
+            </div>
+          </div>
+        </div>
       </section>
+      <style jsx>{`
+        .swiperLeft {
+          position: absolute;
+          left: 0px;
+          top: 0;
+          bottom: 0;
+          width: 160px;
+          z-index: 9;
+          transform: rotate(-180deg);
+
+          height: 100%;
+          background: linear-gradient(
+            270deg,
+            #f7f7f9 0%,
+            rgba(247, 247, 249, 0) 100%
+          );
+        }
+        .tabActive::after {
+          content: "";
+          border-radius: 30px 30px 0px 0px;
+          background: #0547a8;
+          height: 3px;
+          width: 73px;
+          display: inline-block;
+          position: absolute;
+          bottom: -12px;
+          right: 0;
+        }
+        .tabActive {
+          color: #173046;
+          position: relative;
+        }
+      `}</style>
+
+      <style jsx global>{`
+        .swiper-slide {
+          width: auto;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 18px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          border-radius: 100%;
+          width: 60px;
+          height: 60px;
+          /* background: gray; */
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+          z-index: 1000;
+          background-color: white;
+        }
+      `}</style>
     </div>
   );
 };

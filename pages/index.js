@@ -39,6 +39,7 @@ import HomePageVideo2 from "../components/submelk/homePage/video2";
 import HomePageMazaya from "../components/submelk/homePage/homePageMazaya/HomePageMazaya";
 import useOnScreen from "../hooks/useOnScreen";
 import AnimatedBg from "../components/animatedBg/AnimatedBg";
+import Link from "next/link";
 // import CarsSlider from "../components/carsSlider";
 
 export default function Home(
@@ -247,9 +248,11 @@ export default function Home(
           <HomePageFAQ />
 
           <div className="text-center mt-14">
-            <button className="py-2 px-10 text-white font-bold text-lg bg-[#005BEA] rounded-[10px]">
-              سوالات بیشتر
-            </button>
+            <Link href="/faq">
+              <button className="py-2 px-10 text-white font-bold text-lg bg-[#005BEA] rounded-[10px]">
+                سوالات بیشتر
+              </button>
+            </Link>
           </div>
         </div>
       </div>
