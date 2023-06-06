@@ -54,7 +54,7 @@ const ProjectId = () => {
           </div>
         </div>
       </section>
-      <section className="flex justify-between gap-6">
+      <section className="flex items-start justify-between gap-6">
         <div className="grow">
           <div
             className="rounded-[10px] mt-4 p-8 text-[#173046]"
@@ -205,7 +205,7 @@ const ProjectId = () => {
                 حاصل از تخریب مطابق نظر دستگاه نظارت دستهبندی و در محلهای مناسب
                 انبار شوند.
               </p>
-              <div className="flex items-center mt-8 gap-4 font-medium text-sm">
+              <div className="flex items-center flex-wrap mt-8 gap-4 font-medium text-sm">
                 {[...Array(9)].map((item, indx) => (
                   <div key={indx} className="bg-[#F4F4F4] rounded-lg px-3 py-2">
                     اسکلت بتنی
@@ -215,7 +215,7 @@ const ProjectId = () => {
             </div>
             <div>
               <div className="font-bold mb-6">اطلاعات فنی پروژه</div>
-              <div className="flex items-center mt-8 gap-4 font-medium text-sm">
+              <div className="flex items-center flex-wrap mt-8 gap-4 font-medium text-sm">
                 {[...Array(9)].map((item, indx) => (
                   <div
                     key={indx}
@@ -485,14 +485,41 @@ const ProjectId = () => {
             </div>
           </div>
         </div>
-        <div className="w-[287px]">
-          <div className="font-bold">ثبت پیشنهاد</div>
+        <div
+          className="w-[287px] min-w-[287px] bg-white p-6 mt-4 rounded-lg"
+          style={{ boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
+        >
+          <div className="font-bold text-[#173046]">ثبت پیشنهاد</div>
           <div className="font-medium my-6">پروژه ساختمانی الماس یزدانشاه</div>
-          <div className="flex items-center justify-between">
-            <div className="text-[#5D6F7E] text-sm">وضعیت پروژه</div>
-            <div className="text-sm text-[#005BEA] border rounded-lg border-[#005BEA]">
+          <div className="flex items-center justify-between border-b-2 border-b-[#DEE6EF] pb-7 -mx-6 px-6">
+            <div className="text-[#5D6F7E] text-xs">وضعیت پروژه</div>
+            <div className="text-[#005BEA] text-sm border rounded-lg border-[#005BEA] py-1 px-3">
               به زودی
             </div>
+          </div>
+
+          <div className="border-b-2 pb-6 mb-6 border-[#DEE6EF] -mx-6 px-6">
+            <div>
+              <input
+                type="text"
+                className="text-sm border border-[#E1E1E1] rounded-lg w-full p-3 text-center mt-5"
+                placeholder="شماره تماس خود را وارد کنید"
+              />
+            </div>
+            <div>
+              <button className="text-[#005BEA] border-[#005BEA] rounded-lg py-3 border text-center w-full mt-4">
+                نیاز به مشاوره دارم
+              </button>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-4">
+            <button className="text-white bg-[#005BEA] rounded-lg w-[112px] h-[48px]">
+              خرید
+            </button>
+            <button className="text-white bg-[#A80505] rounded-lg w-[112px] h-[48px]">
+              فروش
+            </button>
           </div>
         </div>
       </section>
