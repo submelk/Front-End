@@ -116,7 +116,7 @@ export default function Home(
         </div>
       </div>
 
-      <div>
+      <div className="">
         <div className="font-bold text-[#005BEA] text-2xl text-center mt-12 mb-8">
           پروژه های صاب ملک
         </div>
@@ -130,7 +130,7 @@ export default function Home(
           از سرمایه گذاری تا سود
         </div>
         {/* <style>.cls-1{fill:none;}</style> */}
-        <div className="overflow-x-hidden">
+        <div className="overflow-x-hidden relative -z-10">
           <div className="max-w-full w-[340px] lg:w-[918px] mx-auto mt-20 relative">
             <div className="font-semibold lg:font-bold text-sm lg:text-2xl text-black pt-1 lg:pt-7 absolute right-0 left-0 top-0">
               <div className="pr-9 lg:pr-24" data-aos="fade-right">

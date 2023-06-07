@@ -2,14 +2,15 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const ProjectId = () => {
   return (
     <div className="container mx-auto px-3 pt-14">
-      <section className="flex items-stretch gap-[6px] rounded-[14px] overflow-hidden">
+      <section className="hidden lg:flex items-stretch gap-[6px] rounded-[14px] overflow-hidden">
         <div className="w-1/2">
           <div className="relative w-full h-[375px]">
             <Image
@@ -54,13 +55,58 @@ const ProjectId = () => {
           </div>
         </div>
       </section>
+      <section className="lg:hidden -mx-3">
+        <Swiper
+          style={{
+            "--swiper-navigation-color": "#000",
+            "--swiper-pagination-color": "#fff",
+          }}
+          spaceBetween={25}
+          // thumbs={{ swiper: thumbsSwiper }}
+          modules={[Pagination]}
+          className="mySwiper222"
+          slidesPerView="auto"
+          centeredSlides
+          pagination
+          // loop
+          // loopedSlides={2}
+        >
+          <SwiperSlide>
+            <div className="h-[227px] w-[289px] relative">
+              <Image
+                src="/img/submelk/home2.png"
+                className="object-cover"
+                fill
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[227px] w-[289px] relative">
+              <Image
+                src="/img/submelk/home2.png"
+                className="object-cover"
+                fill
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="h-[227px] w-[289px] relative">
+              <Image
+                src="/img/submelk/home2.png"
+                className="object-cover"
+                fill
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </section>
       <section className="flex items-start justify-between gap-6">
-        <div className="grow">
+        <div className="w-full lg:w-auto lg:grow">
           <div
             className="rounded-[10px] mt-4 p-8 text-[#173046]"
             style={{ "box-shadow": "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
           >
-            <div className="flex items-center justify-between border-b-4 pb-5 border-b-[#F7F8FC] -mx-8 px-8">
+            <div className="flex items-center justify-between border-b-4 pb-5 border-b-[#F7F8FC] -mx-8 lg:px-8 px-4">
               <div>
                 <div className="font-bold text-[#173046]">
                   پروژه ساختمانی الماس یزدانشاه
@@ -118,8 +164,8 @@ const ProjectId = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between pt-8">
-              <div className="lg:w-1/3 flex items-center justify-between font-medium">
+            <div className="flex flex-col-reverse lg:flex-row items-center justify-between pt-8 -mx-9 lg:mx-0">
+              <div className="w-full lg:w-1/3 flex items-center justify-between font-medium px-9 lg:px-0">
                 <div className="">
                   <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
                     4,500
@@ -159,25 +205,25 @@ const ProjectId = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/2 text-sm font-medium">
-                <div className="flex items-center justify-end gap-6 mb-4">
+              <div className="w-full lg:w-1/2 font-medium border-b-4 lg:border-0 pb-7 mb-7 lg:mb-0 lg:pb-0 border-[#F7F8FC] px-5 lg:px-0 text-xs">
+                <div className="flex items-center justify-between lg:justify-end gap-6 mb-4">
                   <div>پیشرفت پروژه</div>
                   <ProgressBar
                     completed={84}
                     maxCompleted={100}
-                    width={239}
+                    width={200}
                     height={8}
                     labelClassName="hidden"
                     bgColor="#005BEA"
                     baseBgColor="#EAEEF3"
                   />
                 </div>
-                <div className="flex items-center justify-end gap-6">
+                <div className="flex items-center justify-between lg:justify-end gap-6">
                   <div>تامین مالی</div>
                   <ProgressBar
                     completed={84}
                     maxCompleted={100}
-                    width={239}
+                    width={200}
                     height={8}
                     labelClassName="hidden"
                     bgColor="#005BEA"
@@ -189,12 +235,32 @@ const ProjectId = () => {
           </div>
 
           <div
+            className="mt-6 bg-white rounded-lg mx-2 lg:hidden p-2"
+            style={{ "box-shadow": "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
+          >
+            <div className=" mb-6 border-[#DEE6EF] -mx-6 px-6">
+              <div>
+                <input
+                  type="text"
+                  className="text-sm border border-[#E1E1E1] rounded-lg w-full p-3 text-center mt-5"
+                  placeholder="شماره تماس خود را وارد کنید"
+                />
+              </div>
+              <div>
+                <button className="text-[#005BEA] border-[#005BEA] rounded-lg py-3 border text-center w-full mt-4">
+                  نیاز به مشاوره دارم
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
             className="text-[#173046] mt-6 p-8"
             style={{ "box-shadow": "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
           >
             <div className="border-b-2 border-b-[#F7F8FC] pb-9 mb-12 -mx-9 px-9">
               <div className="font-bold mb-6">مشخصات فنی پروژه</div>
-              <p className="text-sm leading-10 font-medium">
+              <p className="text-sm leading-10 font-medium text-justify">
                 ساختمانهای موجود و قدیمی که در محدوده عملیاتی پروژه و در محل
                 اجرا و استقرار بناهای جدید بوده و به منظور انجام کار، تخریب آنها
                 ضروری است، باید با نظر کارفرما طبق دستورات دستگاه نظارت
@@ -273,7 +339,7 @@ const ProjectId = () => {
             </div>
           </div>
           <div
-            className="text-[#173046] mt-6 p-8"
+            className="text-[#173046] mt-6 p-3 lg:p-8"
             style={{ "box-shadow": "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
           >
             <div className="">
@@ -379,8 +445,8 @@ const ProjectId = () => {
 
                 <div className="my-8 font-bold text-sm">گزارش کامل دی ۱۴۰۱</div>
 
-                <div className="flex items-center gap-7">
-                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                <div className="flex items-center flex-wrap text-xs lg:text-base gap-2 lg:gap-7 -mx-1">
+                  <div className="bg-[#E6EDF6] rounded-lg gap-1 lg:gap-3 flex py-1 px-3 lg:py-2 lg:px-4">
                     <svg
                       width="22"
                       height="22"
@@ -405,7 +471,7 @@ const ProjectId = () => {
                     </svg>
                     وبلاگ
                   </div>
-                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                  <div className="bg-[#E6EDF6] rounded-lg gap-1 lg:gap-3 flex py-1 px-3 lg:py-2 lg:px-4">
                     <svg
                       width="22"
                       height="22"
@@ -430,7 +496,7 @@ const ProjectId = () => {
                     </svg>
                     وبلاگ
                   </div>
-                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                  <div className="bg-[#E6EDF6] rounded-lg gap-1 lg:gap-3 flex py-1 px-3 lg:py-2 lg:px-4">
                     <svg
                       width="22"
                       height="22"
@@ -455,7 +521,7 @@ const ProjectId = () => {
                     </svg>
                     وبلاگ
                   </div>
-                  <div className="bg-[#E6EDF6] rounded-lg gap-3 flex py-2 px-4">
+                  <div className="bg-[#E6EDF6] rounded-lg gap-1 lg:gap-3 flex py-1 px-3 lg:py-2 lg:px-4">
                     <svg
                       width="22"
                       height="22"
@@ -486,7 +552,7 @@ const ProjectId = () => {
           </div>
         </div>
         <div
-          className="w-[287px] min-w-[287px] bg-white p-6 mt-4 rounded-lg"
+          className="hidden lg:block w-[287px] min-w-[287px] bg-white p-6 mt-4 rounded-lg sticky top-24 left-0"
           style={{ boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)" }}
         >
           <div className="font-bold text-[#173046]">ثبت پیشنهاد</div>
