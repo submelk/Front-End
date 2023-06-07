@@ -22,6 +22,7 @@
     "react-countdown": "^2.3.5",
     "react-custom-checkbox": "^3.1.5",
     "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.10",
     "react-google-recaptcha": "^2.1.0",
     "react-leaflet": "^4.2.1",
     "react-modal": "^3.16.1",
