@@ -48,7 +48,7 @@ const Header = () => {
             <Link href="/" className="font-semibold text-sm">
               صفحه اول
             </Link>
-            <Link href="/" className="font-semibold text-sm">
+            <Link href="/projects" className="font-semibold text-sm">
               پروژه‌ها
             </Link>
             <Link href="/faq" className="font-semibold text-sm">

@@ -37,13 +37,13 @@ const Footer = () => {
             <div className="text-[#005BEA] font-bold text-lg mb-5">
               دسترسی سریع
             </div>
-            <ul className="text-sm font-bold text-[#5D6F7E]">
-              <li className="mb-3">تماس با ما</li>
-              <li className="mb-3">درباره ما</li>
-              <li className="mb-3">قوانین و مقررات</li>
-              <li className="mb-3">سوالات متداول</li>
-              <li className="mb-3">بلاگ</li>
-              <li className="mb-3">راهنما</li>
+            <ul className="text-sm font-bold text-[#5D6F7E] flex flex-wrap lg:block ">
+              <li className="mb-3 w-1/2">تماس با ما</li>
+              <li className="mb-3 w-1/2">درباره ما</li>
+              <li className="mb-3 w-1/2">قوانین و مقررات</li>
+              <li className="mb-3 w-1/2">سوالات متداول</li>
+              <li className="mb-3 w-1/2">بلاگ</li>
+              <li className="mb-3 w-1/2">راهنما</li>
             </ul>
           </div>
           <div>

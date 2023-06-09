@@ -606,21 +606,7 @@ const ProjectId = () => {
             rgba(247, 247, 249, 0) 100%
           );
         }
-        .tabActive::after {
-          content: "";
-          border-radius: 30px 30px 0px 0px;
-          background: #0547a8;
-          height: 3px;
-          width: 73px;
-          display: inline-block;
-          position: absolute;
-          bottom: -12px;
-          right: 0;
-        }
-        .tabActive {
-          color: #173046;
-          position: relative;
-        }
+        
       `}</style>
 
       <style jsx global>{`
