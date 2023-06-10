@@ -17,7 +17,7 @@ const AccountMySubs = () => {
             </div>
           </div>
 
-          <div class="px-2 lg:px-16 flex items-center justify-between mt-8 mb-4 flex-wrap gap-2 lg:gap-0">
+          <div className="px-2 lg:px-16 flex items-center justify-between mt-8 mb-4 flex-wrap gap-2 lg:gap-0">
             <div className="bg-[#005BEA] border border-[#EAEEF3] flex items-center justify-between px-4 lg:px-0 py-3 lg:py-0 lg:justify-around flex-row-reverse lg:flex-col w-full lg:w-[200px] lg:h-[200px] rounded-[10px] overflow-hidden">
               <div className="rounded-[800px] bg-white font-bold lg:text-xl text-lg lg:w-[160px] w-[120px] py-2 lg:py-0 lg:h-[69px] flex items-center justify-center text-[#005BEA]">
                 34
