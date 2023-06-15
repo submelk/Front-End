@@ -31,6 +31,13 @@ const Projects = () => {
 
   return (
     <>
+      <div
+        className="text-center text-sm fixed inset-0 w-full h-full bg-no-repeat -z-10"
+        style={{
+          backgroundImage: "url(/img/submelk/pattern2.svg)",
+          backgroundPosition: "left bottom",
+        }}
+      ></div>
       <div className="container mx-auto lg:px-16 px-3 pt-14">
         <div className="flex items-center justify-between gap-5">
           <div className="relative grow">

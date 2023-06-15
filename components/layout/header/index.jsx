@@ -14,6 +14,7 @@ const Header = () => {
   const { pathname } = router;
 
   const [isScollred, setIsScollred] = useState(false);
+  const [mobilMenuIsOpen, setMobilMenuIsOpen] = useState(false);
 
   useEffect(() => {
     const fff = function () {
@@ -83,7 +84,7 @@ const Header = () => {
           } transition-all`}
         >
           <div className="flex items-center gap-1">
-            <button>
+            <button onClick={() => setMobilMenuIsOpen((prev) => !prev)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="26"
@@ -149,6 +150,63 @@ const Header = () => {
           )}
         </div>
       </header>
+      <nav
+        className={`${
+          mobilMenuIsOpen ? "right-0" : "-right-full"
+        } lg:hidden z-50 fixed transition-all py-8 ${
+          isScollred
+            ? "h-[calc(100vh-61px)] top-[61px]"
+            : "h-[calc(100vh-77px)] top-[77px]"
+        } max-w-[80%] w-[360px] bg-white text-black border border-[#FF006E]`}
+        style={{ borderRadius: "24px 0px 0px 24px" }}
+      >
+        <div
+          className="text-center text-sm absolute inset-0 w-full h-full bg-no-repeat -z-10"
+          style={{
+            backgroundImage: "url(/img/submelk/pattern2.svg)",
+            backgroundPosition: "left bottom",
+            backgroundSize: "75%",
+          }}
+        ></div>
+        <div className="border-b mx-9 pb-4">
+          <div className="relative h-[40px] w-auto">
+            <Image
+              src="/img/submelk/logoBlue.svg"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        <div className="mt-9 mx-9 text-[#173046] font-bold text-sm">
+          <ul>
+            <li className="mb-7">
+              <Link href="/">صفحه اصلی</Link>
+            </li>
+            <li className="mb-7">
+              <Link href="/projects">پروژه‌ها</Link>
+            </li>
+            <li className="mb-7">
+              <Link href="/faq">سوالات متداول</Link>
+            </li>
+            <li className="mb-7">
+              <Link href="/">بلاگ</Link>
+            </li>
+            <li className="mb-7">
+              <Link href="/">تماس با ما</Link>
+            </li>
+            <li className="mb-7">
+              <Link href="/aboutUs">درباره‌ما</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="flex items-center justify-center gap-4 mt-16 font-bold text-[#173046] ">
+          <div>شماره تماس</div>
+          <a href="tel:02179882222" className="text-lg">
+            ۰۲۱-۷۹۸۸۲۲۲۲
+          </a>
+        </div>
+      </nav>
 
       <style jsx>{``}</style>
     </>
