@@ -16,6 +16,13 @@ const Header = () => {
   const [isScollred, setIsScollred] = useState(false);
   const [mobilMenuIsOpen, setMobilMenuIsOpen] = useState(false);
 
+  const ccc = function (e) {
+    if (!e.target.closest("#xxxx")) {
+      setMobilMenuIsOpen(false);
+      window.removeEventListener("click", ccc);
+    }
+  };
+
   useEffect(() => {
     const fff = function () {
       var top = window.pageYOffset || document.documentElement.scrollTop;
@@ -28,8 +35,19 @@ const Header = () => {
     };
     window.addEventListener("scroll", fff);
 
-    return () => window.removeEventListener("scroll", fff);
+    return () => {
+      return window.removeEventListener("scroll", fff);
+    };
   }, []);
+
+  useEffect(() => {
+    if (mobilMenuIsOpen) {
+      setTimeout(() => {
+        window.addEventListener("click", ccc);
+      }, 0);
+      return;
+    }
+  }, [mobilMenuIsOpen]);
 
   return (
     <>
@@ -122,8 +140,8 @@ const Header = () => {
             </button>
           </div>
           <div className="font-bold flex items-center gap-2 ">
-            <a href="tel:02179882222" className="">
-              ۰۲۱-۷۹۸۸۲۲۲۲
+            <a href="tel:02179882222" className="text-xs">
+              ۰۲۱۷۹۸۸۲۲۲۲
             </a>
             <span>
               <svg
@@ -153,6 +171,7 @@ const Header = () => {
         </div>
       </header>
       <nav
+        id="xxxx"
         className={`${
           mobilMenuIsOpen ? "right-0" : "-right-full"
         } lg:hidden z-50 fixed transition-all py-8 ${
