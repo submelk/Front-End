@@ -68,7 +68,9 @@ const Header = () => {
           <div className="font-bold flex items-center gap-8">
             <div>
               <span className="ml-4">شماره تماس</span>
-              <span className="text-lg">۰۲۱۲۸۳۰</span>
+              <a href="tel:02179882222" className="text-lg">
+                ۷۹۸۸۲۲۲۲-021
+              </a>{" "}
             </div>
             <button className="text-[#005BEA] bg-white rounded-lg py-3 px-9">
               ورود | ثبت نام
@@ -120,8 +122,8 @@ const Header = () => {
             </button>
           </div>
           <div className="font-bold flex items-center gap-2 ">
-            <a href="tel:0212830" className="">
-              ۰۲۱۲۸۳۰
+            <a href="tel:02179882222" className="">
+              ۰۲۱-۷۹۸۸۲۲۲۲
             </a>
             <span>
               <svg

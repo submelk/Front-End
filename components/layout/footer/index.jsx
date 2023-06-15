@@ -72,7 +72,9 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-between text-[#173046] font-medium">
               <div>شماره تماس</div>
-              <div className="text-lg">0212830</div>
+              <a href="tel:02179882222" className="text-lg">
+                ۰۲۱-۷۹۸۸۲۲۲۲
+              </a>
             </div>
             <div className="hidden lg:flex items-center mt-5 justify-between text-[#173046] font-medium ">
               <span>آدرس:</span>
