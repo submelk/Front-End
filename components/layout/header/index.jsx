@@ -16,12 +16,17 @@ const Header = () => {
   const [isScollred, setIsScollred] = useState(false);
   const [mobilMenuIsOpen, setMobilMenuIsOpen] = useState(false);
 
-  const ccc = function (e) {
-    if (!e.target.closest("#xxxx")) {
+  const closeMobileMenu = function (e) {
+    if (!e?.target?.closest("#xxxx")) {
       setMobilMenuIsOpen(false);
-      window.removeEventListener("click", ccc);
+      window.removeEventListener("click", closeMobileMenu);
     }
   };
+
+  useEffect(() => {
+    setMobilMenuIsOpen(false);
+    window.removeEventListener("click", closeMobileMenu);
+  }, [pathname]);
 
   useEffect(() => {
     const fff = function () {
@@ -43,7 +48,7 @@ const Header = () => {
   useEffect(() => {
     if (mobilMenuIsOpen) {
       setTimeout(() => {
-        window.addEventListener("click", ccc);
+        window.addEventListener("click", closeMobileMenu);
       }, 0);
       return;
     }
