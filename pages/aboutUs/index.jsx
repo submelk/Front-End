@@ -56,6 +56,13 @@ const AboutUs = () => {
           سازنده‌ها در صاب‌ملک موظف هستند تا تعدادی از صاب‌های پروژه را خریداری
           کنند.
         </p>
+        <div className="lg:hidden">
+          <img
+            src="/img/submelk/aboutUs3.png"
+            className="w-full lg:w-[623]"
+            alt="about"
+          />
+        </div>
         <p className="font-medium text-[#5D6F7E] my-6">
           علاوه بر یک اکوسیستم بهینه داخلی، ما در صاب‌ملک اقدام به ایجاد تیم‌های
           تخصصی و روابط بلندمدت استراتژیک با بازیگران دیگر می‌کنیم. تیم‌های
@@ -66,8 +73,8 @@ const AboutUs = () => {
           در بازار است.
         </p>
 
-        <div className="flex flex-col lg:flex-row items-center justify-evenly mt-52 gap-10 pb-20">
-          <div>
+        <div className="flex flex-col lg:flex-row items-center justify-evenly mt-20 gap-10 pb-20">
+          <div className="hidden lg:block">
             <img
               src="/img/submelk/aboutUs3.png"
               className="w-full lg:w-[623]"

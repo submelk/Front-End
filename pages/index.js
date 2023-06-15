@@ -90,7 +90,7 @@ export default function Home(
             <h2 className="font-bold lg:text-2xl text-lg mb-4">
               صاب‌ملک چیست؟
             </h2>
-            <p className="text-justify" style={{ lineHeight: "45px" }}>
+            <p className="text-justify lg:leading-10 leading-7">
               صاب‌ملک پلت‌فرم تامین مالی جمعی و بدون وقفه پروژه‌های ساخت با
               مدیریت سودآور برای سرمایه‌گذاران است. سرمایه‌گذاری در ساخت و ساز
               از پرسودترین فعالیت های اقتصادی در کشور است. اما ورود به این حوزه

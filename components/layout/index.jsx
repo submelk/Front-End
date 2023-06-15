@@ -10,7 +10,9 @@ const Layout = ({ children }) => {
     <>
       <Header />
       {children}
-      {!["/login", "register"].includes(pathname) && <Footer />}
+      {!["/login", "/login/forget", "/register"].includes(pathname) && (
+        <Footer />
+      )}
     </>
   );
 };
