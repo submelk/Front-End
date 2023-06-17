@@ -23,7 +23,7 @@ import {
 } from "@syncfusion/ej2-react-gantt";
 import { useEffect } from "react";
 
-const Gantt = () => {
+const GanttChart = () => {
   let GanttData = [
     {
       TaskID: 2,
@@ -177,10 +177,31 @@ const Gantt = () => {
     // document.querySelectorAll(
     //   "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
     // )[0].style.opacity = 0;
-    document.querySelectorAll(
-      "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
-    )[0].style.visibility = "hidden";
 
+    if (
+      document.querySelectorAll(
+        "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
+      )[0]
+    ) {
+      document.querySelectorAll(
+        "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
+      )[0].style.visibility = "hidden";
+      document.querySelectorAll(
+        "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
+      )[0].style.opacity = "0";
+    }
+    if (
+      document.querySelectorAll(
+        "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
+      )[0]
+    ) {
+      document.querySelectorAll(
+        "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
+      )[0].style.visibility = "hidden";
+      document.querySelectorAll(
+        "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
+      )[0].style.opacity = "0";
+    }
     document
       .querySelectorAll("table:first-child .e-timeline-top-header-cell")
       .forEach(
@@ -292,4 +313,4 @@ const Gantt = () => {
   );
 };
 
-export default Gantt;
+export default GanttChart;

@@ -31,6 +31,7 @@
     "react-select": "^5.7.0",
     "react-slick": "^0.29.0",
     "react-verification-input": "^3.3.0",
+    "recharts": "^2.7.1",
     "reset-css": "^5.0.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^9.2.2"
