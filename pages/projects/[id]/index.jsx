@@ -679,15 +679,21 @@ const ProjectId = () => {
               </svg>
             </button>
           </div>
-          <GanttChart />
+          <div className="overflow-x-auto" style={{ direction: "ltr" }}>
+            <div className="min-w-[500px]">
+              <GanttChart />
+            </div>
+          </div>
         </section>
         {!fullChart && (
           <section className="bg-white rounded-[10px] p-8 mt-12">
             <div className="text-[#173046] font-bold text-lg mb-16">
               مقایسه بازار
             </div>
-            <div className="w-[90%] mx-auto h-[300px]">
-              <LineChartCustom />
+            <div className="overflow-x-auto" style={{ direction: "ltr" }}>
+              <div className="lg:w-[90%] min-w-[500px] mx-auto h-[300px]">
+                <LineChartCustom />
+              </div>
             </div>
           </section>
         )}
