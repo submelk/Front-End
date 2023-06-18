@@ -178,29 +178,20 @@ const GanttChart = () => {
     //   "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
     // )[0].style.opacity = 0;
 
-    if (
-      document.querySelectorAll(
-        "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
-      )[0]
-    ) {
-      document.querySelectorAll(
-        "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
-      )[0].style.visibility = "hidden";
-      document.querySelectorAll(
-        "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
-      )[0].style.opacity = "0";
+    const cond1 = document.querySelectorAll(
+      "div[style*='font-family: Helvetica Neue, Helvetica, Arial;']"
+    )?.[0];
+    const cond2 = document.querySelectorAll(
+      "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
+    )?.[0];
+
+    if (cond1) {
+      cond1.style.visibility = "hidden";
+      cond1.style.opacity = "0";
     }
-    if (
-      document.querySelectorAll(
-        "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
-      )[0]
-    ) {
-      document.querySelectorAll(
-        "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
-      )[0].style.visibility = "hidden";
-      document.querySelectorAll(
-        "div[style*='background-color: rgba(0, 0, 0, 0.5);']"
-      )[0].style.opacity = "0";
+    if (cond2) {
+      cond2.style.visibility = "hidden";
+      cond2.style.opacity = "0";
     }
     document
       .querySelectorAll("table:first-child .e-timeline-top-header-cell")
