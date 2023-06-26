@@ -2,7 +2,7 @@ import axios from "axios";
 
 const apiClient = axios.create({
   // baseURL: 'https://deelay.me/6000/http://192.168.100.80:8000/api/',
-  baseURL: "https://portal.prestigegallery.ir/api/public/",
+  baseURL: "http://87.107.162.33:5555/api/",
   headers: {
     "Content-type": "application/json",
   },

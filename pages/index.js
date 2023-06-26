@@ -19,7 +19,7 @@ import "aos/dist/aos.css";
 // import LexusImg from "/public/img/brands/Lexus.svg";
 // import BMWImg from "/public/img/brands/BMW.svg";
 import { useQuery } from "@tanstack/react-query";
-import { getHomePageData } from "../APIGate/public";
+import { getHome, getHomePageData } from "../APIGate/public";
 // import { baseURL } from "../config";
 
 // const useMobileDetect = dynamic(() => import("../components/isMobile"), {
@@ -47,10 +47,9 @@ export default function Home(
     // preData
   }
 ) {
-  // const { data } = useQuery(["getHomePageData"], getHomePageData, {
-
-  //   // initialData: preData,
-  // });
+  const { data } = useQuery(["getHome"], getHome, {
+    // initialData: preData,
+  });
   // const isMobileValue = isMobile;
 
   useEffect(() => {
@@ -236,7 +235,7 @@ export default function Home(
           نظر مشتریان درباره صاب‌ملک
         </div>
 
-        <CustomersSlider />
+        <CustomersSlider data={data?.viewpoint}/>
       </div>
 
       <div>

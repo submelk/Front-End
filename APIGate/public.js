@@ -1,11 +1,11 @@
 import apiClient from "./axios.config";
 
-export const getHomePageData = async () => {
-  const { data } = await apiClient.get('get_homepage_data');
+export const getFaq = async () => {
+  const { data } = await apiClient.get("faq");
   return data;
 };
 
-export const postContactUs = async (form) => {
-  const { data } = await apiClient.post(`contactUs`, { ...form });
+export const getHome = async () => {
+  const { data } = await apiClient.get(`home`);
   return data;
 };

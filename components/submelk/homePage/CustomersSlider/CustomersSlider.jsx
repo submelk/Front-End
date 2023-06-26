@@ -6,7 +6,10 @@ import "swiper/css/navigation";
 
 import Image from "next/image";
 
-const CustomersSlider = () => {
+const CustomersSlider = ({ data }) => {
+  console.log({ data });
+
+  if(!data?.length) return null
   return (
     <div>
       <Swiper
@@ -25,150 +28,32 @@ const CustomersSlider = () => {
         loopedSlides={2}
         // dir="rtl"
       >
-        <SwiperSlide className="py-4 pt-14">
-          <div className="relative">
-            <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
-              <div className="w-full text-center absolute -top-14">
-                <Image
-                  src="/img/submelk/mazaya/1_.png"
-                  className="object-cover mx-auto rounded-full"
-                  width="116"
-                  height="116"
-                />
+        {data?.map(
+          ({ id, viewpoint_title, viewpoint_content, viewpoint_image }) => (
+            <SwiperSlide key={id} className="py-4 pt-14">
+              <div className="relative">
+                <button className="w-[311px] h-[254px] lg:w-[369px]  lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
+                  <div className="w-full text-center absolute -top-14">
+                    {/* <Image
+                      src={'http://viewpoint_image'}
+                      className="object-cover mx-auto rounded-full"
+                      width="116"
+                      height="116"
+                    /> */}
+                  </div>
+                  <div className="px-7 py-2">
+                    <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
+                      {viewpoint_title}
+                    </div>
+                    <p className="text-[#5D6F7E] font-medium text-center leading-10">
+                      {viewpoint_content}
+                    </p>
+                  </div>
+                </button>
               </div>
-              <div className="px-7 py-2">
-                <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
-                  محمد گلدست درباره صاب‌ملک میگه!
-                </div>
-                <p className="text-[#5D6F7E] font-medium text-center leading-10">
-                  1 من از سایت صاب‌ملک خیلی راضیم چون راستش خیلی راحت میتونم
-                  معاملاتمو انجام بدم و به نظرم جزو بهترین ایده ای هست توی حوزه
-                  سرمایه گذاری امن.
-                </p>
-              </div>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="py-4 pt-14">
-          <div className="relative">
-            <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
-              <div className="w-full text-center absolute -top-14">
-                <Image
-                  src="/img/submelk/mazaya/1_.png"
-                  className="object-cover mx-auto rounded-full"
-                  width="116"
-                  height="116"
-                />
-              </div>
-              <div className="px-7 py-2">
-                <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
-                  محمد گلدست درباره صاب‌ملک میگه!
-                </div>
-                <p className="text-[#5D6F7E] font-medium text-center leading-10">
-                  2 من از سایت صاب‌ملک خیلی راضیم چون راستش خیلی راحت میتونم
-                  معاملاتمو انجام بدم و به نظرم جزو بهترین ایده ای هست توی حوزه
-                  سرمایه گذاری امن.
-                </p>
-              </div>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="py-4 pt-14">
-          <div className="relative">
-            <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
-              <div className="w-full text-center absolute -top-14">
-                <Image
-                  src="/img/submelk/mazaya/1_.png"
-                  className="object-cover mx-auto rounded-full"
-                  width="116"
-                  height="116"
-                />
-              </div>
-              <div className="px-7 py-2">
-                <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
-                  محمد گلدست درباره صاب‌ملک میگه!
-                </div>
-                <p className="text-[#5D6F7E] font-medium text-center leading-10">
-                  3 من از سایت صاب‌ملک خیلی راضیم چون راستش خیلی راحت میتونم
-                  معاملاتمو انجام بدم و به نظرم جزو بهترین ایده ای هست توی حوزه
-                  سرمایه گذاری امن.
-                </p>
-              </div>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="py-4 pt-14">
-          <div className="relative">
-            <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
-              <div className="w-full text-center absolute -top-14">
-                <Image
-                  src="/img/submelk/mazaya/1_.png"
-                  className="object-cover mx-auto rounded-full"
-                  width="116"
-                  height="116"
-                />
-              </div>
-              <div className="px-7 py-2">
-                <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
-                  محمد گلدست درباره صاب‌ملک میگه!
-                </div>
-                <p className="text-[#5D6F7E] font-medium text-center leading-10">
-                  4 من از سایت صاب‌ملک خیلی راضیم چون راستش خیلی راحت میتونم
-                  معاملاتمو انجام بدم و به نظرم جزو بهترین ایده ای هست توی حوزه
-                  سرمایه گذاری امن.
-                </p>
-              </div>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="py-4 pt-14">
-          <div className="relative">
-            <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
-              <div className="w-full text-center absolute -top-14">
-                <Image
-                  src="/img/submelk/mazaya/1_.png"
-                  className="object-cover mx-auto rounded-full"
-                  width="116"
-                  height="116"
-                />
-              </div>
-              <div className="px-7 py-2">
-                <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
-                  محمد گلدست درباره صاب‌ملک میگه!
-                </div>
-                <p className="text-[#5D6F7E] font-medium text-center leading-10">
-                  5 من از سایت صاب‌ملک خیلی راضیم چون راستش خیلی راحت میتونم
-                  معاملاتمو انجام بدم و به نظرم جزو بهترین ایده ای هست توی حوزه
-                  سرمایه گذاری امن.
-                </p>
-              </div>
-            </button>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="py-4 pt-14">
-          <div className="relative">
-            <button className="w-[311px] h-[254px] lg:w-[369px] lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
-              <div className="w-full text-center absolute -top-14">
-                <Image
-                  src="/img/submelk/mazaya/1_.png"
-                  className="object-cover mx-auto rounded-full"
-                  width="116"
-                  height="116"
-                />
-              </div>
-              <div className="px-7 py-2">
-                <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">
-                  محمد گلدست درباره صاب‌ملک میگه!
-                </div>
-                <p className="text-[#5D6F7E] font-medium text-center leading-10">
-                  6 من از سایت صاب‌ملک خیلی راضیم چون راستش خیلی راحت میتونم
-                  معاملاتمو انجام بدم و به نظرم جزو بهترین ایده ای هست توی حوزه
-                  سرمایه گذاری امن.
-                </p>
-              </div>
-            </button>
-          </div>
-        </SwiperSlide>
+            </SwiperSlide>
+          )
+        )}
 
         <div className="swiperRight2 hidden lg:block"></div>
         <div className="swiperLeft2 hidden lg:block"></div>
