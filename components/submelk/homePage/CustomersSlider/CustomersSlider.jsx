@@ -7,9 +7,9 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 const CustomersSlider = ({ data }) => {
-  console.log({ data });
 
-  if(!data?.length) return null
+  if (!data?.length) return null;
+
   return (
     <div>
       <Swiper
