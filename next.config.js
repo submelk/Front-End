@@ -9,5 +9,5 @@ module.exports = {
     domains: ["submelk.vercel.app"],
     // unoptimized: true,
   },
-  trailingSlash: true,
+  trailingSlash: false,
 };
