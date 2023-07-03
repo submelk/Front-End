@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 const CustomersSlider = ({ data }) => {
-
   if (!data?.length) return null;
 
   return (
@@ -34,12 +33,12 @@ const CustomersSlider = ({ data }) => {
               <div className="relative">
                 <button className="w-[311px] h-[254px] lg:w-[369px]  lg:h-[304px] bg-white rounded-[20px] overflow-hidden flex flex-col shadowSlideCard">
                   <div className="w-full text-center absolute -top-14">
-                    {/* <Image
-                      src={'http://viewpoint_image'}
-                      className="object-cover mx-auto rounded-full"
+                    <Image
+                      src={viewpoint_image}
+                      className="object-cover mx-auto rounded-full h-[116px]"
                       width="116"
                       height="116"
-                    /> */}
+                    />
                   </div>
                   <div className="px-7 py-2">
                     <div className="text-center font-bold text-[#005BEA] mb-4 mt-20">

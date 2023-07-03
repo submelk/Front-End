@@ -3,7 +3,7 @@ import Image from "next/image";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -56,7 +56,7 @@ export default function Home(
     AOS.init({
       duration: 1500,
       offset: 100,
-      delay: 300,
+      delay: 0,
       once: true,
     });
   }, []);
@@ -70,14 +70,56 @@ export default function Home(
           backgroundPosition: "left bottom",
         }}
       ></div>
-      <div
+      {/* <div
         className="h-[193px] lg:h-[630px] bg-[url(/img/submelk/homeTop.png)] bg-no-repeat w-full relative"
         style={{ backgroundSize: "100% 100%" }}
       >
         <button className="hidden lg:block bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-4 absolute lg:bottom-24 left-28">
           مشاوره رایگان
         </button>
-      </div>
+      </div> */}
+
+      <Swiper
+        style={
+          {
+            // "--swiper-navigation-color": "#000",
+            // "--swiper-pagination-color": "#000",
+          }
+        }
+        spaceBetween={25}
+        // navigation={true}
+        // thumbs={{ swiper: thumbsSwiper }}
+        modules={[Autoplay]}
+        autoplay={{
+          delay: 4500,
+          disableOnInteraction: false,
+        }}
+        className="mySwiper999 min-h-[630px]"
+        simulateTouch={false}
+        slidesPerView="auto"
+        centeredSlides
+        breakpoints={{
+          740: {
+            centeredSlides: false,
+          },
+        }}
+      >
+        {data?.slide?.map(({ id, image }) => (
+          <SwiperSlide key={id} className="pb-4">
+            <div
+              className={`h-[193px] lg:h-[630px] bg-no-repeat w-full relative`}
+              style={{
+                backgroundSize: "100% 100%",
+                backgroundImage: `url(${image})`,
+              }}
+            >
+              <button className="hidden lg:block bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-4 absolute lg:bottom-24 left-28">
+                مشاوره رایگان
+              </button>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <div className="bg-white lg:hidden text-center py-4">
         <button className="bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-3 mx-auto">
           مشاوره رایگان
@@ -120,7 +162,7 @@ export default function Home(
           پروژه های صاب ملک
         </div>
         <div className="container mx-auto lg:px-9">
-          <HomePageProjectList />
+          <HomePageProjectList data={data?.project} />
         </div>
       </div>
 
@@ -235,7 +277,7 @@ export default function Home(
           نظر مشتریان درباره صاب‌ملک
         </div>
 
-        <CustomersSlider data={data?.viewpoint}/>
+        <CustomersSlider data={data?.viewpoint} />
       </div>
 
       <div>
@@ -244,7 +286,7 @@ export default function Home(
         </div>
 
         <div className="container mx-auto px-3 lg:px-32">
-          <HomePageFAQ />
+          <HomePageFAQ faq={data?.faq} />
 
           <div className="text-center mt-14">
             <Link href="/faq">
@@ -258,6 +300,13 @@ export default function Home(
       <style jsx global>{`
         body {
           background-color: #f7f7f9;
+        }
+
+        .mySwiper999 .swiper-slide.pb-4 {
+          padding-bottom: 0px !important;
+        }
+        .mySwiper999 .swiper-slide {
+          width: 100%;
         }
       `}</style>
     </>
