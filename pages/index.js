@@ -47,6 +47,9 @@ export default function Home(
     // preData
   }
 ) {
+  const [form, setForm] = useState({ name: "", phone: "" });
+  const [form2, setForm2] = useState({ name: "", phone: "" });
+
   const { data } = useQuery(["getHome"], getHome, {
     // initialData: preData,
   });
@@ -251,11 +254,19 @@ export default function Home(
               type="text"
               className="w-[150px] grow bg-white rounded-lg border border-[#DEE6EF] py-4 px-3 text-[#5D6F7E] font-medium"
               placeholder="نام و نام خانوادگی"
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, name: e.target.value }))
+              }
+              value={form?.name}
             />
             <input
               type="text"
               className="w-[150px] grow bg-white rounded-lg border border-[#DEE6EF] py-4 px-3 text-[#5D6F7E] font-medium"
               placeholder="شماره موبایل"
+              onChange={(e) =>
+                setForm((prev) => ({ ...prev, phone: e.target.value }))
+              }
+              value={form?.phone}
             />
             <button className="w-full lg:w-auto bg-white text-[#005BEA] font-bold py-4 px-5 rounded-lg">
               درخواست
