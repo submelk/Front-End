@@ -27,6 +27,9 @@
   font-weight: 100 1000;
   font-display: fallback;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   /* font-family: "IranSans", sans-serif; */
@@ -311,4 +314,7 @@ video {
 .tabActive {
   color: #173046;
   position: relative;
+}
+button:disabled {
+  opacity: 0.5;
 }

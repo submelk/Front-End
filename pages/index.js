@@ -18,8 +18,8 @@ import "aos/dist/aos.css";
 // import VolvoImg from "/public/img/brands/Volvo.svg";
 // import LexusImg from "/public/img/brands/Lexus.svg";
 // import BMWImg from "/public/img/brands/BMW.svg";
-import { useQuery } from "@tanstack/react-query";
-import { getHome, getHomePageData } from "../APIGate/public";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { getHome, getHomePageData, postCunsult } from "../APIGate/public";
 // import { baseURL } from "../config";
 
 // const useMobileDetect = dynamic(() => import("../components/isMobile"), {
@@ -40,6 +40,7 @@ import HomePageMazaya from "../components/submelk/homePage/homePageMazaya/HomePa
 import useOnScreen from "../hooks/useOnScreen";
 import AnimatedBg from "../components/animatedBg/AnimatedBg";
 import Link from "next/link";
+import Swal from "sweetalert2";
 // import CarsSlider from "../components/carsSlider";
 
 export default function Home(
@@ -53,6 +54,27 @@ export default function Home(
   const { data } = useQuery(["getHome"], getHome, {
     // initialData: preData,
   });
+  const { mutate: mutateCunsult, isLoading: mutateCunsultIsLoading } =
+    useMutation(["postCunsult"], postCunsult, {
+      // initialData: preData,
+
+      onSuccess: () => {
+        Swal.fire({
+          title: "درخواست شما با موفقیت ثبت شد",
+          // html: <i>You clicked the button!</i>,
+          icon: "success",
+          confirmButtonText: "تایید",
+        });
+      },
+      onError: () => {
+        Swal.fire({
+          title: "درخواست شما با خطا همراه شد",
+          // html: <i>You clicked the button!</i>,
+          icon: "error",
+          confirmButtonText: "تایید",
+        });
+      },
+    });
   // const isMobileValue = isMobile;
 
   useEffect(() => {
@@ -116,9 +138,11 @@ export default function Home(
                 backgroundImage: `url(${image})`,
               }}
             >
-              <button className="hidden lg:block bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-4 absolute lg:bottom-24 left-28">
-                مشاوره رایگان
-              </button>
+              <a href="#consult">
+                <button className="hidden lg:block bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-4 absolute lg:bottom-24 left-28">
+                  مشاوره رایگان
+                </button>
+              </a>
             </div>
           </SwiperSlide>
         ))}
@@ -236,41 +260,57 @@ export default function Home(
         </div>
       </div>
 
-      <div className="bg-[#005BEA] py-8 lg:-mt-48">
-        <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto px-3 lg:px-9">
-          <div className="flex items-center text-white gap-5 mb-4 lg:mb-0">
-            <Image src="/img/submelk/support.png" width="149" height="125" />
-            <div>
-              <div className="font-bold lg:text-xl mb-4">
-                مشاوره رایگانتو از صاب‌ملک بگیر.
-              </div>
-              <div className="font-medium">
-                برای دریافت مشاوره رایگان شماره موبایلت رو وارد کن.
+      <div id="consult" className="pt-14">
+        <div className="bg-[#005BEA] py-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between container mx-auto px-3 lg:px-9">
+            <div className="flex items-center text-white gap-5 mb-4 lg:mb-0">
+              <Image src="/img/submelk/support.png" width="149" height="125" />
+              <div>
+                <div className="font-bold lg:text-xl mb-4">
+                  مشاوره رایگانتو از صاب‌ملک بگیر.
+                </div>
+                <div className="font-medium">
+                  برای دریافت مشاوره رایگان شماره موبایلت رو وارد کن.
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex items-center flex-wrap gap-4 text-sm">
-            <input
-              type="text"
-              className="w-[150px] grow bg-white rounded-lg border border-[#DEE6EF] py-4 px-3 text-[#5D6F7E] font-medium"
-              placeholder="نام و نام خانوادگی"
-              onChange={(e) =>
-                setForm((prev) => ({ ...prev, name: e.target.value }))
-              }
-              value={form?.name}
-            />
-            <input
-              type="text"
-              className="w-[150px] grow bg-white rounded-lg border border-[#DEE6EF] py-4 px-3 text-[#5D6F7E] font-medium"
-              placeholder="شماره موبایل"
-              onChange={(e) =>
-                setForm((prev) => ({ ...prev, phone: e.target.value }))
-              }
-              value={form?.phone}
-            />
-            <button className="w-full lg:w-auto bg-white text-[#005BEA] font-bold py-4 px-5 rounded-lg">
-              درخواست
-            </button>
+            <div className="flex items-center flex-wrap gap-4 text-sm">
+              <input
+                type="text"
+                className="w-[150px] grow bg-white rounded-lg border border-[#DEE6EF] py-4 px-3 text-[#5D6F7E] font-medium"
+                placeholder="نام و نام خانوادگی"
+                onChange={(e) =>
+                  setForm((prev) => ({ ...prev, name: e.target.value }))
+                }
+                value={form?.name}
+              />
+              <input
+                type="tel"
+                maxLength="11"
+                className="w-[150px] grow bg-white rounded-lg border border-[#DEE6EF] py-4 px-3 text-[#5D6F7E] font-medium"
+                placeholder="شماره موبایل"
+                onChange={(e) =>
+                  setForm((prev) => ({ ...prev, phone: e.target.value }))
+                }
+                value={form?.phone}
+              />
+              <button
+                disabled={
+                  mutateCunsultIsLoading ||
+                  !form?.name?.length ||
+                  !form?.phone?.length
+                }
+                onClick={() =>
+                  mutateCunsult({
+                    c_name: form?.name,
+                    c_telephone: form?.phone,
+                  })
+                }
+                className="w-full lg:w-auto bg-white text-[#005BEA] font-bold py-4 px-5 rounded-lg"
+              >
+                درخواست
+              </button>
+            </div>
           </div>
         </div>
       </div>

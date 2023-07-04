@@ -1,6 +1,8 @@
+import { useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useState } from "react";
 import ReactModal from "react-modal";
+import { getFaq } from "../../APIGate/public";
 
 const customStyles = {
   content: {
@@ -21,6 +23,11 @@ const customStyles = {
 const FAQ = () => {
   const [openOne, setOpenOne] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const { data } = useQuery(["getFaq"], getFaq, {
+    // initialData: preData,
+  });
+  console.log({ data });
 
   return (
     <>
@@ -122,19 +129,17 @@ const FAQ = () => {
             پرسش‌های متداول
           </div>
           <div className="font-semibold text-[#363636]">
-            {[...Array(10)].map((item, indx) => (
-              <div key={indx} className="bg-white p-4 rounded-[10px] mb-4">
+            {data?.data?.map(({ id, answers, questions }) => (
+              <div key={id} className="bg-white p-4 rounded-[10px] mb-4">
                 <button
                   onClick={() => {
-                    if (indx === openOne) setOpenOne("");
-                    else setOpenOne(indx);
+                    if (id === openOne) setOpenOne("");
+                    else setOpenOne(id);
                   }}
                   className="flex items-center justify-between gap-3 text-[#005BEA] font-bold w-full"
                 >
-                  <span className="text-right">
-                    چرا صاب‌ملک؟ چطور در صاب‌ملک رشد خواهم کرد؟
-                  </span>
-                  {openOne === indx ? (
+                  <span className="text-right">{questions}</span>
+                  {openOne === id ? (
                     <Image
                       src="/img/submelk/minus.svg"
                       width="19"
@@ -146,24 +151,22 @@ const FAQ = () => {
                 </button>
                 <div
                   className={`${
-                    openOne === indx
+                    openOne === id
                       ? "max-h-screen opacity-100 visible"
                       : "max-h-0 opacity-0 invisible"
                   } font-normal`}
                   style={{ transition: ".4s" }}
                 >
-                  <p className="text-[#5D6F7E] text-sm py-4">
-                    طی دهه‌های گذشته، رشد قیمت مسکن نسبت به سایر دارایی‌ها مانند
-                    بورس، طلا، ماشین و دلار همواره با ثبات‌تر و بیشتر بوده است.
-                    علاوه‌بر این مسکن همواره سرمایه‌گذاری امن برای خانواده‌های
-                    ایرانی بوده است.
-                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: answers }}
+                    className="text-[#5D6F7E] text-sm py-4"
+                  ></p>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="container lg:px-16 px-3 sticky w-full bottom-0 right-0 left-0 border-t-4 mt-9 py-5 border-[#EDEEF2] bg-white flex items-center justify-around">
+        <div className="lg:px-16 px-3 sticky w-full bottom-0 right-0 left-0 border-t-4 mt-9 py-5 border-[#EDEEF2] bg-white flex items-center justify-around">
           <div className="flex flex-col lg:flex-row items-center w-full mx-auto border rounded-lg px-3">
             <div className=" grow py-4 text-[#173046] font-bold">
               به سوال من پاسخ داده نشده است
