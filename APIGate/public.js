@@ -9,8 +9,10 @@ export const getHome = async () => {
   const { data } = await apiClient.get(`home`);
   return data;
 };
-export const getProjectList = async () => {
-  const { data } = await apiClient.get(`project/list`);
+export const getProjectList = async ({ search }) => {
+  const { data } = await apiClient.get(`project/list`, {
+    params: { search },
+  });
   return data;
 };
 export const postCunsult = async ({ c_name, c_telephone }) => {
