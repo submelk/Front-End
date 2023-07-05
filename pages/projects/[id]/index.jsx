@@ -9,9 +9,23 @@ import "swiper/css/pagination";
 import GanttChart from "../../../components/ganttChart";
 import LineChartCustom from "../../../components/lineChart";
 import { useState } from "react";
+import { getProjectSingle } from "../../../APIGate/public";
+import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "next/router";
+import { numberWithCommas } from "../../../utils";
 
 const ProjectId = () => {
   const [fullChart, setFullChart] = useState(false);
+  const router = useRouter();
+
+  const id = router?.query?.id;
+
+  const { data } = useQuery(["getProjectSingle"], () => getProjectSingle(id), {
+    enabled: !!id,
+  });
+
+  const projectData = data?.data?.[0];
+
   return (
     <>
       <div
@@ -123,7 +137,7 @@ const ProjectId = () => {
                   <div className="flex items-center justify-between border-b-4 pb-5 border-b-[#F7F8FC] -mx-8 lg:px-8 px-4">
                     <div>
                       <div className="font-bold text-[#173046]">
-                        پروژه ساختمانی الماس یزدانشاه
+                        {projectData?.Name}
                       </div>
                       <div className="text-sm font-medium gap-4 flex items-center mt-4">
                         <svg
@@ -150,7 +164,7 @@ const ProjectId = () => {
                             stroke-linejoin="round"
                           />
                         </svg>
-                        تهران، بلوار میرداماد
+                        {projectData?.City}،{projectData?.Neighbourhood}
                       </div>
                     </div>
                     <div className="text-center">
@@ -182,7 +196,7 @@ const ProjectId = () => {
                     <div className="w-full lg:w-1/3 flex items-center justify-between font-medium px-9 lg:px-0">
                       <div className="">
                         <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          4,500
+                          {projectData?.Meterage}
                         </div>
                         <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
                           <Image
@@ -196,7 +210,7 @@ const ProjectId = () => {
                       <div className="h-[44px] w-[1px] bg-[#EAEEF3]"></div>
                       <div className="">
                         <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          15
+                          {projectData?.Unit}
                         </div>
                         <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
                           <Image
@@ -211,7 +225,7 @@ const ProjectId = () => {
 
                       <div className="">
                         <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          44,500
+                          {numberWithCommas(projectData?.P_sub)}
                         </div>
                         <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
                           <Image
@@ -227,7 +241,7 @@ const ProjectId = () => {
                       <div className="flex items-center justify-between lg:justify-end gap-6 mb-4">
                         <div>پیشرفت پروژه</div>
                         <ProgressBar
-                          completed={84}
+                          completed={projectData?.Progress}
                           maxCompleted={100}
                           width={200}
                           height={8}

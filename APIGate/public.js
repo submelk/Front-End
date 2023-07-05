@@ -15,6 +15,10 @@ export const getProjectList = async ({ search }) => {
   });
   return data;
 };
+export const getProjectSingle = async (id) => {
+  const { data } = await apiClient.get(`project/${id}`);
+  return data;
+};
 export const postCunsult = async ({ c_name, c_telephone }) => {
   const { data } = await apiClient.post(`add/consultation`, {
     c_name,
