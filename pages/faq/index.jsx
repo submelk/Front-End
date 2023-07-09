@@ -41,7 +41,7 @@ const FAQ = () => {
           confirmButtonText: "تایید",
         });
 
-        setModalIsOpen(false)
+        setModalIsOpen(false);
       },
       onError: () => {
         Swal.fire({
