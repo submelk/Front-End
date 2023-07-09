@@ -4,6 +4,10 @@ export const getFaq = async () => {
   const { data } = await apiClient.get("faq");
   return data;
 };
+export const postFaq = async (body) => {
+  const { data } = await apiClient.post("add/question", body);
+  return data;
+};
 
 export const getHome = async () => {
   const { data } = await apiClient.get(`home`);

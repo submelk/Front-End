@@ -1,8 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import Image from "next/image";
 import { useState } from "react";
 import ReactModal from "react-modal";
-import { getFaq } from "../../APIGate/public";
+import { getFaq, postFaq } from "../../APIGate/public";
+import Swal from "sweetalert2";
 
 const customStyles = {
   content: {
@@ -23,11 +24,34 @@ const customStyles = {
 const FAQ = () => {
   const [openOne, setOpenOne] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [form, setForm] = useState({});
 
   const { data } = useQuery(["getFaq"], getFaq, {
     // initialData: preData,
   });
-  console.log({ data });
+  const { mutate: mutateCunsult, isLoading: mutateCunsultIsLoading } =
+    useMutation(["postFaq"], postFaq, {
+      // initialData: preData,
+
+      onSuccess: () => {
+        Swal.fire({
+          title: "درخواست شما با موفقیت ثبت شد",
+          // html: <i>You clicked the button!</i>,
+          icon: "success",
+          confirmButtonText: "تایید",
+        });
+
+        setModalIsOpen(false)
+      },
+      onError: () => {
+        Swal.fire({
+          title: "درخواست شما با خطا همراه شد",
+          // html: <i>You clicked the button!</i>,
+          icon: "error",
+          confirmButtonText: "تایید",
+        });
+      },
+    });
 
   return (
     <>
@@ -69,6 +93,10 @@ const FAQ = () => {
               <textarea
                 type="text"
                 className="resize-none border border-[#DEE6EF] rounded-lg w-full p-3"
+                onChange={(e) =>
+                  setForm((prev) => ({ ...prev, question: e.target.value }))
+                }
+                value={form?.question}
               />
             </label>{" "}
           </div>
@@ -80,6 +108,10 @@ const FAQ = () => {
               <input
                 type="text"
                 className="border border-[#DEE6EF] rounded-lg w-full p-3"
+                onChange={(e) =>
+                  setForm((prev) => ({ ...prev, name_family: e.target.value }))
+                }
+                value={form?.name_family}
               />
             </label>
           </div>
@@ -91,6 +123,10 @@ const FAQ = () => {
               <input
                 type="text"
                 className="border border-[#DEE6EF] rounded-lg w-full p-3"
+                onChange={(e) =>
+                  setForm((prev) => ({ ...prev, email: e.target.value }))
+                }
+                value={form?.email}
               />
             </label>
           </div>
@@ -102,6 +138,10 @@ const FAQ = () => {
               <input
                 type="text"
                 className="border border-[#DEE6EF] rounded-lg w-full p-3"
+                onChange={(e) =>
+                  setForm((prev) => ({ ...prev, tell: e.target.value }))
+                }
+                value={form?.tell}
               />
             </label>
           </div>
@@ -110,7 +150,13 @@ const FAQ = () => {
           </div>
 
           <div className="w-full flex items-center justify-center gap-6 mt-12 text-sm font-medium">
-            <button className="bg-[#005BEA] text-white px-14 py-4 rounded-lg">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                mutateCunsult(form);
+              }}
+              className="bg-[#005BEA] text-white px-14 py-4 rounded-lg"
+            >
               ثبت سوال
             </button>
           </div>
