@@ -9,9 +9,23 @@ import "swiper/css/pagination";
 import GanttChart from "../../../components/ganttChart";
 import LineChartCustom from "../../../components/lineChart";
 import { useState } from "react";
+import { getProjectSingle } from "../../../APIGate/public";
+import { useQuery } from "@tanstack/react-query";
+import { useRouter } from "next/router";
+import { numberWithCommas } from "../../../utils";
 
 const ProjectId = () => {
   const [fullChart, setFullChart] = useState(false);
+  const router = useRouter();
+
+  const id = router?.query?.id;
+
+  const { data } = useQuery(["getProjectSingle"], () => getProjectSingle(id), {
+    enabled: !!id,
+  });
+
+  const projectData = data?.data?.[0];
+
   return (
     <>
       <div
@@ -27,44 +41,59 @@ const ProjectId = () => {
             <section className="hidden lg:flex items-stretch gap-[6px] rounded-[14px] overflow-hidden">
               <div className="w-1/2">
                 <div className="relative w-full h-[375px]">
-                  <Image
-                    src="/img/submelk/homeMain.png"
-                    className="object-cover"
-                    fill
-                  />
+                  {projectData?.ProjectImage?.[1] && (
+                    <Image
+                      src={projectData?.ProjectImage?.[0]}
+                      alt="project image"
+                      className="object-cover"
+                      fill
+                    />
+                  )}
                 </div>
               </div>
               <div className="w-1/2 flex h-full gap-[6px]">
                 <div className="w-1/2 flex flex-col justify-between h-full gap-[6px]">
                   <div className="relative w-full h-[177px]">
-                    <Image
-                      src="/img/submelk/homeMain1.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[1] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[1]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                   <div className="relative w-full h-[192px]">
-                    <Image
-                      src="/img/submelk/homeMain2.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[2] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[2]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="w-1/2 flex flex-col justify-between h-full gap-[6px]">
                   <div className="relative w-full h-[177px]">
-                    <Image
-                      src="/img/submelk/homeMain3.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[3] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[3]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                   <div className="relative w-full h-[192px]">
-                    <Image
-                      src="/img/submelk/homeMain4.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[4] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[4]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -123,7 +152,7 @@ const ProjectId = () => {
                   <div className="flex items-center justify-between border-b-4 pb-5 border-b-[#F7F8FC] -mx-8 lg:px-8 px-4">
                     <div>
                       <div className="font-bold text-[#173046]">
-                        پروژه ساختمانی الماس یزدانشاه
+                        {projectData?.Name}
                       </div>
                       <div className="text-sm font-medium gap-4 flex items-center mt-4">
                         <svg
@@ -150,7 +179,7 @@ const ProjectId = () => {
                             stroke-linejoin="round"
                           />
                         </svg>
-                        تهران، بلوار میرداماد
+                        {projectData?.City}،{projectData?.Neighbourhood}
                       </div>
                     </div>
                     <div className="text-center">
@@ -182,7 +211,7 @@ const ProjectId = () => {
                     <div className="w-full lg:w-1/3 flex items-center justify-between font-medium px-9 lg:px-0">
                       <div className="">
                         <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          4,500
+                          {projectData?.Meterage}
                         </div>
                         <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
                           <Image
@@ -196,7 +225,7 @@ const ProjectId = () => {
                       <div className="h-[44px] w-[1px] bg-[#EAEEF3]"></div>
                       <div className="">
                         <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          15
+                          {projectData?.Unit}
                         </div>
                         <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
                           <Image
@@ -211,7 +240,7 @@ const ProjectId = () => {
 
                       <div className="">
                         <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          44,500
+                          {numberWithCommas(projectData?.P_sub)}
                         </div>
                         <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
                           <Image
@@ -227,7 +256,7 @@ const ProjectId = () => {
                       <div className="flex items-center justify-between lg:justify-end gap-6 mb-4">
                         <div>پیشرفت پروژه</div>
                         <ProgressBar
-                          completed={84}
+                          completed={projectData?.Progress}
                           maxCompleted={100}
                           width={200}
                           height={8}
@@ -278,18 +307,10 @@ const ProjectId = () => {
                 >
                   <div className="border-b-2 border-b-[#F7F8FC] pb-9 mb-12 -mx-9 px-9">
                     <div className="font-bold mb-6">مشخصات فنی پروژه</div>
-                    <p className="text-sm leading-10 font-medium text-justify">
-                      ساختمانهای موجود و قدیمی که در محدوده عملیاتی پروژه و در
-                      محل اجرا و استقرار بناهای جدید بوده و به منظور انجام کار،
-                      تخریب آنها ضروری است، باید با نظر کارفرما طبق دستورات
-                      دستگاه نظارت اندازهگیری، صورتمجلس و تخریب شوند. این موارد
-                      باید در مشخصات فنی خصوصی ذکر گردند. قبل از شروع به تخریب
-                      ساختمانها باید مسائل ایمنی و اصول فنی در مورد قطع و کنترل
-                      انشعابات خطوط آب، برق، تلفن و ... با هماهنگی سازمانهای
-                      مسئول مراعات گردد. در صورت لزوم باید مصالح حاصل از تخریب
-                      مطابق نظر دستگاه نظارت دستهبندی و در محلهای مناسب انبار
-                      شوند.
-                    </p>
+                    <p
+                      className="text-sm leading-10 font-medium text-justify"
+                      dangerouslySetInnerHTML={{ __html: projectData?.Report }}
+                    ></p>
                     <div className="flex items-center flex-wrap mt-8 gap-4 font-medium text-sm">
                       {[...Array(9)].map((item, indx) => (
                         <div

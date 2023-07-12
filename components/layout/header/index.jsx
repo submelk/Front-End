@@ -64,8 +64,14 @@ const Header = () => {
         >
           <div className="flex items-center gap-8">
             <Link href="/">
-              <button className="w-[170px] h-[38px] relative ">
-                <Image src="/img/submelk/logo.svg" fill />
+              <button
+                className="w-[170px] h-[38px] relative"
+                style={{
+                  filter: "brightness(0) invert(1)",
+                  transform: "scale(1.3)",
+                }}
+              >
+                <Image src="/img/submelk/xxx.svg" fill />
               </button>
             </Link>
             <div className="h-[30px] w-[1px] bg-[rgba(256,256,256,.4)]"></div>

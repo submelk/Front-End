@@ -4,6 +4,10 @@ export const getFaq = async () => {
   const { data } = await apiClient.get("faq");
   return data;
 };
+export const postFaq = async (body) => {
+  const { data } = await apiClient.post("add/question", body);
+  return data;
+};
 
 export const getHome = async () => {
   const { data } = await apiClient.get(`home`);
@@ -13,6 +17,10 @@ export const getProjectList = async ({ search }) => {
   const { data } = await apiClient.get(`project/list`, {
     params: { search },
   });
+  return data;
+};
+export const getProjectSingle = async (id) => {
+  const { data } = await apiClient.get(`project/${id}`);
   return data;
 };
 export const postCunsult = async ({ c_name, c_telephone }) => {
