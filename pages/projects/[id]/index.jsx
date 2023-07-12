@@ -41,44 +41,59 @@ const ProjectId = () => {
             <section className="hidden lg:flex items-stretch gap-[6px] rounded-[14px] overflow-hidden">
               <div className="w-1/2">
                 <div className="relative w-full h-[375px]">
-                  <Image
-                    src="/img/submelk/homeMain.png"
-                    className="object-cover"
-                    fill
-                  />
+                  {projectData?.ProjectImage?.[1] && (
+                    <Image
+                      src={projectData?.ProjectImage?.[0]}
+                      alt="project image"
+                      className="object-cover"
+                      fill
+                    />
+                  )}
                 </div>
               </div>
               <div className="w-1/2 flex h-full gap-[6px]">
                 <div className="w-1/2 flex flex-col justify-between h-full gap-[6px]">
                   <div className="relative w-full h-[177px]">
-                    <Image
-                      src="/img/submelk/homeMain1.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[1] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[1]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                   <div className="relative w-full h-[192px]">
-                    <Image
-                      src="/img/submelk/homeMain2.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[2] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[2]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="w-1/2 flex flex-col justify-between h-full gap-[6px]">
                   <div className="relative w-full h-[177px]">
-                    <Image
-                      src="/img/submelk/homeMain3.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[3] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[3]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                   <div className="relative w-full h-[192px]">
-                    <Image
-                      src="/img/submelk/homeMain4.png"
-                      className="object-cover"
-                      fill
-                    />
+                    {projectData?.ProjectImage?.[4] && (
+                      <Image
+                        src={projectData?.ProjectImage?.[4]}
+                        alt="project image"
+                        className="object-cover"
+                        fill
+                      />
+                    )}
                   </div>
                 </div>
               </div>
@@ -292,18 +307,10 @@ const ProjectId = () => {
                 >
                   <div className="border-b-2 border-b-[#F7F8FC] pb-9 mb-12 -mx-9 px-9">
                     <div className="font-bold mb-6">مشخصات فنی پروژه</div>
-                    <p className="text-sm leading-10 font-medium text-justify">
-                      ساختمانهای موجود و قدیمی که در محدوده عملیاتی پروژه و در
-                      محل اجرا و استقرار بناهای جدید بوده و به منظور انجام کار،
-                      تخریب آنها ضروری است، باید با نظر کارفرما طبق دستورات
-                      دستگاه نظارت اندازهگیری، صورتمجلس و تخریب شوند. این موارد
-                      باید در مشخصات فنی خصوصی ذکر گردند. قبل از شروع به تخریب
-                      ساختمانها باید مسائل ایمنی و اصول فنی در مورد قطع و کنترل
-                      انشعابات خطوط آب، برق، تلفن و ... با هماهنگی سازمانهای
-                      مسئول مراعات گردد. در صورت لزوم باید مصالح حاصل از تخریب
-                      مطابق نظر دستگاه نظارت دستهبندی و در محلهای مناسب انبار
-                      شوند.
-                    </p>
+                    <p
+                      className="text-sm leading-10 font-medium text-justify"
+                      dangerouslySetInnerHTML={{ __html: projectData?.Report }}
+                    ></p>
                     <div className="flex items-center flex-wrap mt-8 gap-4 font-medium text-sm">
                       {[...Array(9)].map((item, indx) => (
                         <div

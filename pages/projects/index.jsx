@@ -12,6 +12,7 @@ import Modal from "react-modal";
 import { useQuery } from "@tanstack/react-query";
 import { getProjectList } from "../../APIGate/public";
 import { numberWithCommas } from "../../utils";
+import Link from "next/link";
 
 const customStyles = {
   content: {
@@ -131,104 +132,106 @@ const Projects = () => {
                 P_sub,
                 ProjectImage,
               }) => (
-                <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden  shadowSlideCard">
-                  <div className="relative">
-                    <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
-                      {Status}
-                    </div>
-                    <Swiper
-                      style={{
-                        "--swiper-navigation-color": "#000",
-                        "--swiper-pagination-color": "#fff",
-                      }}
-                      spaceBetween={10}
-                      // thumbs={{ swiper: thumbsSwiper }}
-                      pagination={{
-                        clickable: true,
-                      }}
-                      modules={[Pagination]}
-                      nested
-                      className="mySwiper2"
-                    >
-                      {ProjectImage?.map((item) => (
-                        <SwiperSlide>
-                          <div className="h-[227px] w-[289px] relative">
-                            <Image src={item} fill />
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
-                  </div>
-                  <div className="text-[#173046] p-4 text-right ">
-                    <div className="font-bold">{Name}</div>
-                    <div className="flex items-center gap-2 mt-2 text-sm font-medium">
-                      <Image
-                        src="/img/submelk/location.svg"
-                        width="22"
-                        height="22"
-                      />
-                      <div>
-                        {City}، {Neighbourhood}
+                <Link href={`/projects/${id}`} key={id}>
+                  <button className="w-[289px] h-[485px] bg-white rounded-lg overflow-hidden shadowSlideCard">
+                    <div className="relative">
+                      <div className="whitespace-nowrap px-3 text-sm py-1 text-[#FF006E] font-medium rounded-lg absolute right-3 top-3 z-10 bg-white border border-[#F4C8C1]">
+                        {Status}
                       </div>
+                      <Swiper
+                        style={{
+                          "--swiper-navigation-color": "#000",
+                          "--swiper-pagination-color": "#fff",
+                        }}
+                        spaceBetween={10}
+                        // thumbs={{ swiper: thumbsSwiper }}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        nested
+                        className="mySwiper2"
+                      >
+                        {ProjectImage?.map((item) => (
+                          <SwiperSlide>
+                            <div className="h-[227px] w-[289px] relative">
+                              <Image src={item} fill />
+                            </div>
+                          </SwiperSlide>
+                        ))}
+                      </Swiper>
                     </div>
-                    <div className="flex items-center justify-between text-xs font-medium border-b pb-5 mb-6 mt-8">
-                      <div>پیشرفت پروژه</div>
-                      <div className="w-[153px]">
-                        <ProgressBar
-                          height={6}
-                          bgColor="#005BEA"
-                          baseBgColor="#EAEEF3"
-                          labelClassName="hidden"
-                          completed={Progress}
+                    <div className="text-[#173046] p-4 text-right ">
+                      <div className="font-bold">{Name}</div>
+                      <div className="flex items-center gap-2 mt-2 text-sm font-medium">
+                        <Image
+                          src="/img/submelk/location.svg"
+                          width="22"
+                          height="22"
                         />
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between font-medium">
-                      <div className="">
-                        <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          {Meterage}
+                        <div>
+                          {City}، {Neighbourhood}
                         </div>
-                        <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
-                          <Image
-                            src="/img/submelk/metraj.svg"
-                            width="20"
-                            height="20"
+                      </div>
+                      <div className="flex items-center justify-between text-xs font-medium border-b pb-5 mb-6 mt-8">
+                        <div>پیشرفت پروژه</div>
+                        <div className="w-[153px]">
+                          <ProgressBar
+                            height={6}
+                            bgColor="#005BEA"
+                            baseBgColor="#EAEEF3"
+                            labelClassName="hidden"
+                            completed={Progress}
                           />
-                          متراژ
                         </div>
                       </div>
-                      <div className="h-[44px] w-[1px] bg-[#EAEEF3]"></div>
-                      <div className="">
-                        <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
-                          {Unit}
+                      <div className="flex items-center justify-between font-medium">
+                        <div className="">
+                          <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
+                            {Meterage}
+                          </div>
+                          <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
+                            <Image
+                              src="/img/submelk/metraj.svg"
+                              width="20"
+                              height="20"
+                            />
+                            متراژ
+                          </div>
                         </div>
-                        <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
-                          <Image
-                            src="/img/submelk/vahed.svg"
-                            width="20"
-                            height="20"
-                          />
-                          واحد
+                        <div className="h-[44px] w-[1px] bg-[#EAEEF3]"></div>
+                        <div className="">
+                          <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4">
+                            {Unit}
+                          </div>
+                          <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
+                            <Image
+                              src="/img/submelk/vahed.svg"
+                              width="20"
+                              height="20"
+                            />
+                            واحد
+                          </div>
                         </div>
-                      </div>
-                      <div className="h-[44px] w-[1px] bg-[#EAEEF3]"></div>
+                        <div className="h-[44px] w-[1px] bg-[#EAEEF3]"></div>
 
-                      <div className="">
-                        <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4 text-sm">
-                          {numberWithCommas(P_sub)}
-                        </div>
-                        <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
-                          <Image
-                            src="/img/submelk/sub.svg"
-                            width="15"
-                            height="15"
-                          />
-                          صاب
+                        <div className="">
+                          <div className="text-center py-1 px-2 bg-[#F4F4F4] rounded-md mb-4 text-sm">
+                            {numberWithCommas(P_sub)}
+                          </div>
+                          <div className="flex items-center text-sm text-[#5D6F7E] justify-center gap-1">
+                            <Image
+                              src="/img/submelk/sub.svg"
+                              width="15"
+                              height="15"
+                            />
+                            صاب
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </button>
+                  </button>
+                </Link>
               )
             )
           )}

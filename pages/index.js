@@ -119,7 +119,7 @@ export default function Home(
           delay: 4500,
           disableOnInteraction: false,
         }}
-        className="mySwiper999 min-h-[630px]"
+        className="mySwiper999 lg:min-h-[630px]"
         simulateTouch={false}
         slidesPerView="auto"
         centeredSlides
@@ -148,9 +148,11 @@ export default function Home(
         ))}
       </Swiper>
       <div className="bg-white lg:hidden text-center py-4">
-        <button className="bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-3 mx-auto">
-          مشاوره رایگان
-        </button>
+        <a href="#consult">
+          <button className="bg-[#005BEA] rounded-[10px] font-bold text-lg text-white px-9 py-3 mx-auto">
+            مشاوره رایگان
+          </button>
+        </a>
       </div>
       <div className="bg-[#005BEA]">
         <div className="container text-white mx-auto flex flex-col lg:flex-row items-stretch justify-between py-14 gap-14 px-5 lg:px-9">
